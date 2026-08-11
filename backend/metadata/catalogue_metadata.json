@@ -1,0 +1,594 @@
+{
+    "LACE1001": {
+        "sku": "LACE1001",
+        "image": "/catalogue/LACE1001/LACE1001_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1002": {
+        "sku": "LACE1002",
+        "image": "/catalogue/LACE1002/LACE1002_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1003": {
+        "sku": "LACE1003",
+        "image": "/catalogue/LACE1003/LACE1003_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1004": {
+        "sku": "LACE1004",
+        "image": "/catalogue/LACE1004/LACE1004_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1005": {
+        "sku": "LACE1005",
+        "image": "/catalogue/LACE1005/LACE1005_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1006": {
+        "sku": "LACE1006",
+        "image": "/catalogue/LACE1006/LACE1006_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1007": {
+        "sku": "LACE1007",
+        "image": "/catalogue/LACE1007/LACE1007_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1008": {
+        "sku": "LACE1008",
+        "image": "/catalogue/LACE1008/LACE1008_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1009": {
+        "sku": "LACE1009",
+        "image": "/catalogue/LACE1009/LACE1009_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1010": {
+        "sku": "LACE1010",
+        "image": "/catalogue/LACE1010/LACE1010_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1011": {
+        "sku": "LACE1011",
+        "image": "/catalogue/LACE1011/LACE1011_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1012": {
+        "sku": "LACE1012",
+        "image": "/catalogue/LACE1012/LACE1012_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1013": {
+        "sku": "LACE1013",
+        "image": "/catalogue/LACE1013/LACE1013_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1014": {
+        "sku": "LACE1014",
+        "image": "/catalogue/LACE1014/LACE1014_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1015": {
+        "sku": "LACE1015",
+        "image": "/catalogue/LACE1015/LACE1015_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1016": {
+        "sku": "LACE1016",
+        "image": "/catalogue/LACE1016/LACE1016_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1017": {
+        "sku": "LACE1017",
+        "image": "/catalogue/LACE1017/LACE1017_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1018": {
+        "sku": "LACE1018",
+        "image": "/catalogue/LACE1018/LACE1018_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1019": {
+        "sku": "LACE1019",
+        "image": "/catalogue/LACE1019/LACE1019_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1020": {
+        "sku": "LACE1020",
+        "image": "/catalogue/LACE1020/LACE1020_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1021": {
+        "sku": "LACE1021",
+        "image": "/catalogue/LACE1021/LACE1021_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1022": {
+        "sku": "LACE1022",
+        "image": "/catalogue/LACE1022/LACE1022_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1023": {
+        "sku": "LACE1023",
+        "image": "/catalogue/LACE1023/LACE1023_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "LACE1024": {
+        "sku": "LACE1024",
+        "image": "/catalogue/LACE1024/LACE1024_0.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0001": {
+        "sku": "TESTIMG0001",
+        "image": "/catalogue/TESTIMG0001/source-002.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a piece of white fabric with a delicate lace pattern. The fabric appears to be made of a soft, textured material and has a slightly wrinkled texture. The pattern is made up of small, diamond-shaped stitches that create a symmetrical design. The edges of the fabric are slightly frayed, giving it a textured appearance. The background is plain white, making the fabric stand out.",
+        "applications": []
+    },
+    "TESTIMG0002": {
+        "sku": "TESTIMG0002",
+        "image": "/catalogue/TESTIMG0002/source-003.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0003": {
+        "sku": "TESTIMG0003",
+        "image": "/catalogue/TESTIMG0003/source-004.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0004": {
+        "sku": "TESTIMG0004",
+        "image": "/catalogue/TESTIMG0004/source-005.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0005": {
+        "sku": "TESTIMG0005",
+        "image": "/catalogue/TESTIMG0005/source-006.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0006": {
+        "sku": "TESTIMG0006",
+        "image": "/catalogue/TESTIMG0006/source-007.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0007": {
+        "sku": "TESTIMG0007",
+        "image": "/catalogue/TESTIMG0007/source-009.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image is a close-up of a piece of fabric with a textured pattern. The fabric appears to be made of a light-colored material, possibly cotton or linen, and has a slightly wrinkled texture. The pattern is made up of small, irregularly shaped lines and dots, creating a zigzag-like design. The lines are evenly spaced and run horizontally across the fabric. The overall appearance of the fabric is delicate and delicate.",
+        "applications": []
+    },
+    "TESTIMG0008": {
+        "sku": "TESTIMG0008",
+        "image": "/catalogue/TESTIMG0008/source-010.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0009": {
+        "sku": "TESTIMG0009",
+        "image": "/catalogue/TESTIMG0009/source-011.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0010": {
+        "sku": "TESTIMG0010",
+        "image": "/catalogue/TESTIMG0010/source-012.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0011": {
+        "sku": "TESTIMG0011",
+        "image": "/catalogue/TESTIMG0011/source-013.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0012": {
+        "sku": "TESTIMG0012",
+        "image": "/catalogue/TESTIMG0012/source-014.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0013": {
+        "sku": "TESTIMG0013",
+        "image": "/catalogue/TESTIMG0013/source-022.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image is a close-up of a fabric with a floral pattern. The fabric appears to be made of a light grey material and has a subtle texture. The pattern is made up of various types of flowers and leaves in different shades of blue, black, and yellow. The flowers are arranged in a symmetrical manner, with some overlapping each other. The leaves are also made of black and white sequins, creating a textured and intricate design. The overall effect is a beautiful and",
+        "applications": []
+    },
+    "TESTIMG0014": {
+        "sku": "TESTIMG0014",
+        "image": "/catalogue/TESTIMG0014/source-028.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a piece of white fabric with a delicate lace pattern. The fabric appears to be made of a soft, textured material and has a subtle sheen to it. The pattern is made up of small, intricate swirls and curves that create a symmetrical design. The edges of the fabric are slightly frayed, giving it a textured appearance. On the right side of the image, there is a label that reads \"Rishi Vastra",
+        "applications": []
+    },
+    "TESTIMG0015": {
+        "sku": "TESTIMG0015",
+        "image": "/catalogue/TESTIMG0015/source-017.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0016": {
+        "sku": "TESTIMG0016",
+        "image": "/catalogue/TESTIMG0016/source-018.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0017": {
+        "sku": "TESTIMG0017",
+        "image": "/catalogue/TESTIMG0017/source-019.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0018": {
+        "sku": "TESTIMG0018",
+        "image": "/catalogue/TESTIMG0018/source-020.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0019": {
+        "sku": "TESTIMG0019",
+        "image": "/catalogue/TESTIMG0019/source-021.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0020": {
+        "sku": "TESTIMG0020",
+        "image": "/catalogue/TESTIMG0020/source-023.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0021": {
+        "sku": "TESTIMG0021",
+        "image": "/catalogue/TESTIMG0021/source-024.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0022": {
+        "sku": "TESTIMG0022",
+        "image": "/catalogue/TESTIMG0022/source-031.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a beige-colored fabric with a textured pattern. The fabric appears to be made of a soft, textured material with a subtle sheen. The pattern is made up of small, diamond-shaped stitches that create a zigzag-like design. The stitches are evenly spaced and run horizontally across the fabric. On the right side of the image, there is a white label with black text that reads \"Rishi Vastra V",
+        "applications": []
+    },
+    "TESTIMG0023": {
+        "sku": "TESTIMG0023",
+        "image": "/catalogue/TESTIMG0023/source-030.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image is a close-up of a piece of white fabric with a delicate lace design. The fabric appears to be made of a soft, textured material, possibly cotton or linen. The design is made up of multiple layers of white lace, with a repeating pattern of small, intricate flowers and leaves. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are also intricately detailed, with curved lines and curves. The overall effect is elegant and",
+        "applications": []
+    },
+    "TESTIMG0024": {
+        "sku": "TESTIMG0024",
+        "image": "/catalogue/TESTIMG0024/source-033.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a piece of fabric with a textured surface. The fabric appears to be made of a light-colored material with small, irregularly shaped holes scattered across it. The holes are evenly spaced and vary in size and shape, creating a uniform pattern. On the right side of the image, there is a white label with black text that reads \"Rishi Vastra Vapar PVT. LTD.\" The label also has a small logo of",
+        "applications": []
+    },
+    "TESTIMG0025": {
+        "sku": "TESTIMG0025",
+        "image": "/catalogue/TESTIMG0025/source-032.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0026": {
+        "sku": "TESTIMG0026",
+        "image": "/catalogue/TESTIMG0026/source-034.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0027": {
+        "sku": "TESTIMG0027",
+        "image": "/catalogue/TESTIMG0027/source-035.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0028": {
+        "sku": "TESTIMG0028",
+        "image": "/catalogue/TESTIMG0028/source-036.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0029": {
+        "sku": "TESTIMG0029",
+        "image": "/catalogue/TESTIMG0029/source-037.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0030": {
+        "sku": "TESTIMG0030",
+        "image": "/catalogue/TESTIMG0030/source-039.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a fabric with a zigzag pattern. The fabric appears to be made of a soft, textured material, possibly wool or a similar material. The pattern is made up of alternating black and beige zigzags, creating a chevron-like design. On the right side of the image, there is a white label with black text that reads \"Made in the USA\". The label is rectangular in shape and has a barcode",
+        "applications": []
+    },
+    "TESTIMG0031": {
+        "sku": "TESTIMG0031",
+        "image": "/catalogue/TESTIMG0031/source-040.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0032": {
+        "sku": "TESTIMG0032",
+        "image": "/catalogue/TESTIMG0032/source-045.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a piece of white fabric with a green abstract pattern on it. The pattern is made up of multiple lines that form a zigzag-like design. The lines are arranged in a way that creates a sense of depth and dimension. The fabric appears to be made of a soft, lightweight material and has a slightly wrinkled texture. On the top right corner of the image, there is a label with a barcode and some information about the fabric. The background is plain",
+        "applications": []
+    },
+    "TESTIMG0033": {
+        "sku": "TESTIMG0033",
+        "image": "/catalogue/TESTIMG0033/source-046.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a piece of fabric with a textured surface. The fabric appears to be a light purple color with a subtle sheen. The texture of the fabric is rough and uneven, with vertical lines running horizontally across the image. On the right side of the image, there is a white label with black text that reads \"Made in the USA\". The label is rectangular in shape and has a black border. The background is white, making the fabric stand out",
+        "applications": []
+    },
+    "TESTIMG0034": {
+        "sku": "TESTIMG0034",
+        "image": "/catalogue/TESTIMG0034/source-047.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a dark blue fabric. The fabric appears to be made of a soft, silky material and has a smooth texture. On the right side of the image, there is a white label with black text. The label is rectangular in shape and has the brand name \"J.Crew\" written in bold letters at the top. The background is blurred, but it seems to be a wooden surface.",
+        "applications": []
+    },
+    "TESTIMG0035": {
+        "sku": "TESTIMG0035",
+        "image": "/catalogue/TESTIMG0035/source-048.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image is a close-up of a fabric with a floral pattern. The fabric has a white background with a repeating design of blue and yellow flowers and green leaves. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are scattered throughout the design, creating a sense of depth and dimension. On the right side of the image, there is a small white label with black text that appears to be a label for the fabric.",
+        "applications": []
+    },
+    "TESTIMG0036": {
+        "sku": "TESTIMG0036",
+        "image": "/catalogue/TESTIMG0036/source-051.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a piece of fabric with two black lines drawn on it. The lines are arranged in a symmetrical pattern, creating a sense of depth and dimension. The fabric appears to be a light green color, and there is a small white label on the bottom right corner of the image that reads \"BEST VALUE, Top Picks Updated + BONUS\".",
+        "applications": []
+    },
+    "TESTIMG0037": {
+        "sku": "TESTIMG0037",
+        "image": "/catalogue/TESTIMG0037/source-052.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "The image shows a close-up of a piece of fabric with a floral pattern. The fabric appears to be made of a dark brown material with a subtle texture. The pattern is made up of small, intricate flowers and leaves in a repeating design. The flowers are in various shades of brown and are arranged in a symmetrical pattern, with some overlapping each other. On the right side of the image, there is a white label with black text that reads \"Made in the USA\". The",
+        "applications": []
+    },
+    "TESTIMG0038": {
+        "sku": "TESTIMG0038",
+        "image": "/catalogue/TESTIMG0038/source-053.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0039": {
+        "sku": "TESTIMG0039",
+        "image": "/catalogue/TESTIMG0039/source-054.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0040": {
+        "sku": "TESTIMG0040",
+        "image": "/catalogue/TESTIMG0040/source-055.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0041": {
+        "sku": "TESTIMG0041",
+        "image": "/catalogue/TESTIMG0041/source-056.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0042": {
+        "sku": "TESTIMG0042",
+        "image": "/catalogue/TESTIMG0042/source-057.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0043": {
+        "sku": "TESTIMG0043",
+        "image": "/catalogue/TESTIMG0043/source-058.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0044": {
+        "sku": "TESTIMG0044",
+        "image": "/catalogue/TESTIMG0044/source-059.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0045": {
+        "sku": "TESTIMG0045",
+        "image": "/catalogue/TESTIMG0045/source-060.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0046": {
+        "sku": "TESTIMG0046",
+        "image": "/catalogue/TESTIMG0046/source-061.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0047": {
+        "sku": "TESTIMG0047",
+        "image": "/catalogue/TESTIMG0047/source-062.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0048": {
+        "sku": "TESTIMG0048",
+        "image": "/catalogue/TESTIMG0048/source-063.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0049": {
+        "sku": "TESTIMG0049",
+        "image": "/catalogue/TESTIMG0049/source-064.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    },
+    "TESTIMG0050": {
+        "sku": "TESTIMG0050",
+        "image": "/catalogue/TESTIMG0050/source-065.jpeg",
+        "pattern": "",
+        "color": "",
+        "description": "",
+        "applications": []
+    }
+}

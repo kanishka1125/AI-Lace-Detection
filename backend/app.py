@@ -1,4 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 
 import os
 import tempfile
@@ -25,6 +27,26 @@ app = FastAPI(
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+app.mount(
+    "/catalogue",
+    StaticFiles(directory=os.path.join(BASE_DIR, "catalogue")),
+    name="catalogue"
+)
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:5174",
+        "http://127.0.0.1:5174",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 EMBEDDINGS_PATH = os.path.join(
     BASE_DIR,
@@ -79,8 +101,14 @@ async def search_image(file: UploadFile = File(...)):
         output = []
 
         for score, image_path in zip(scores[0], results):
+
+            image_url = image_path.replace("\\", "/")
+
+            if image_url.startswith("../catalogue/"):
+                image_url = image_url.replace("../catalogue/", "/catalogue/")
+
             output.append({
-                "image": image_path,
+                "image": image_url,
                 "score": float(score)
             })
 

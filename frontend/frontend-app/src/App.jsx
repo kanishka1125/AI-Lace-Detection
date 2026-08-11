@@ -179,82 +179,42 @@ function similarityColor(v) {
 /* ---------------------------------------------------------------------- */
 
 function textColorFor(hex) {
+  if (!hex) return "#ffffff";
+
   const c = hex.replace("#", "");
   const r = parseInt(c.substring(0, 2), 16);
   const g = parseInt(c.substring(2, 4), 16);
   const b = parseInt(c.substring(4, 6), 16);
   const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-  return lum > 0.6 ? "#0000001a" : "#ffffff26";
+
+  return lum > 0.6 ? "#000000" : "#ffffff";
 }
 
 function Swatch({ product, className = "" }) {
-  const rand = useMemo(() => mulberry32(seedFromString(product.sku)), [product.sku]);
-  const accent = textColorFor(product.colorHex);
-  const w = 400, h = 400;
-  const elements = [];
-
-  if (product.patternType === "lace-floral" || product.patternType === "lace-corded" || product.patternType === "lace-beaded") {
-    for (let i = 0; i < 26; i++) {
-      const cx = rand() * w, cy = rand() * h, r = 8 + rand() * 10;
-      elements.push(
-        <g key={"fl" + i} transform={`translate(${cx} ${cy})`}>
-          {[0, 72, 144, 216, 288].map((deg) => (
-            <ellipse key={deg} cx={0} cy={-r * 0.6} rx={r * 0.42} ry={r * 0.85} fill={accent} transform={`rotate(${deg})`} />
-          ))}
-          <circle r={r * 0.28} fill={accent} />
-        </g>
-      );
-    }
-    for (let i = 0; i < 140; i++) {
-      elements.push(<circle key={"dot" + i} cx={rand() * w} cy={rand() * h} r={0.8 + rand() * 1.1} fill={accent} />);
-    }
-  } else if (product.patternType === "lace-guipure") {
-    for (let i = 0; i < 16; i++) {
-      const cx = rand() * w, cy = rand() * h, s = 20 + rand() * 22;
-      elements.push(
-        <rect key={"g" + i} x={cx - s / 2} y={cy - s / 2} width={s} height={s}
-          rx={s * 0.35} fill="none" stroke={accent} strokeWidth={3}
-          transform={`rotate(${rand() * 45} ${cx} ${cy})`} />
-      );
-    }
-  } else if (product.patternType === "mesh") {
-    for (let i = -2; i < 22; i++) {
-      elements.push(<line key={"m1" + i} x1={i * 22} y1={0} x2={i * 22 + 200} y2={h} stroke={accent} strokeWidth={1.5} />);
-      elements.push(<line key={"m2" + i} x1={i * 22} y1={h} x2={i * 22 + 200} y2={0} stroke={accent} strokeWidth={1.5} />);
-    }
-  } else if (product.patternType === "herringbone") {
-    for (let row = 0; row < 20; row++) {
-      for (let col = 0; col < 10; col++) {
-        const x = col * 40 - 10, y = row * 20;
-        elements.push(
-          <polyline key={`h${row}-${col}`} points={`${x},${y + 20} ${x + 20},${y} ${x + 40},${y + 20}`} fill="none" stroke={accent} strokeWidth={2} />
-        );
-      }
-    }
-  } else if (product.patternType === "velvet") {
-    for (let i = 0; i < 900; i++) {
-      elements.push(<circle key={"v" + i} cx={rand() * w} cy={rand() * h} r={0.6} fill={accent} opacity={0.5 + rand() * 0.5} />);
-    }
-  } else if (product.patternType === "sequin") {
-    for (let row = 0; row < 14; row++) {
-      for (let col = 0; col < 14; col++) {
-        const jx = (rand() - 0.5) * 6, jy = (rand() - 0.5) * 6;
-        const x = col * 30 + 14 + jx, y = row * 30 + 14 + jy;
-        elements.push(<rect key={`sq${row}-${col}`} x={x - 4} y={y - 4} width={8} height={8} fill={accent} transform={`rotate(45 ${x} ${y})`} />);
-      }
-    }
-  } else {
-    for (let i = 0; i < 30; i++) {
-      elements.push(<line key={"s" + i} x1={i * 14 - 100} y1={0} x2={i * 14 + 60} y2={h} stroke={accent} strokeWidth={1} />);
-    }
-  }
-
   return (
-    <div className={`relative overflow-hidden ${className}`} style={{ backgroundColor: product.colorHex }}>
-      <svg viewBox={`0 0 ${w} ${h}`} className="w-full h-full" preserveAspectRatio="xMidYMid slice">
-        {elements}
-      </svg>
-      <div className="absolute inset-0" style={{ boxShadow: "inset 0 0 60px rgba(0,0,0,0.06)" }} />
+    <div className={`relative overflow-hidden bg-gray-50 ${className}`}>
+      {product.imageUrl ? (
+        <img
+          src={product.imageUrl}
+          alt={product.name || product.sku}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            console.error("Image failed to load:", product.imageUrl);
+            e.currentTarget.style.display = "none";
+          }}
+        />
+      ) : (
+        <div className="w-full h-full flex items-center justify-center text-gray-400">
+          No image
+        </div>
+      )}
+
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          boxShadow: "inset 0 0 60px rgba(0,0,0,0.06)",
+        }}
+      />
     </div>
   );
 }
@@ -563,12 +523,16 @@ function ResultCard({ product, onView, style }) {
           </ul>
 
           <p className="text-[11px] font-semibold uppercase tracking-wide text-white/70 mb-1.5">Specifications</p>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 text-[11px] mb-3">
-            <div><span className="text-white/50">Material </span>{product.material}</div>
-            <div><span className="text-white/50">Pattern </span>{product.pattern}</div>
-            <div><span className="text-white/50">Color </span>{product.color}</div>
-            <div><span className="text-white/50">Width </span>{product.width}</div>
-            <div><span className="text-white/50">GSM </span>{product.gsm}</div>
+          <div className="grid grid-cols-2 gap-3 text-xs text-gray-600">
+            <div>
+              <span className="font-medium">Pattern:</span>{" "}
+              {product.pattern || "—"}
+            </div>
+
+            <div>
+              <span className="font-medium">Color:</span>{" "}
+              {product.color || "—"}
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-2">
@@ -692,6 +656,7 @@ function HomePage({ onViewProduct }) {
   const [tab, setTab] = useState("image");
   const [dragOver, setDragOver] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
   const [query, setQuery] = useState("");
   const [isSearching, setIsSearching] = useState(false);
   const [results, setResults] = useState(null);
@@ -703,59 +668,86 @@ function HomePage({ onViewProduct }) {
   const examples = ["white floral lace", "black embroidered lace", "stretch mesh fabric", "cotton fabric"];
 
   function handleFile(file) {
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (e) => setImagePreview(e.target.result);
-    reader.readAsDataURL(file);
-  }
+  if (!file) return;
 
-  function runSearch() {
-    setIsSearching(true);
-    setResults(null);
-    setAnalytics(null);
-    const startedTab = tab;
-    const startedImage = imagePreview;
-    const startedQuery = query;
-    setTimeout(() => {
-      let pool = PRODUCTS;
-      if (startedTab === "text" && startedQuery.trim()) {
-        const q = startedQuery.toLowerCase();
-        const matched = PRODUCTS.filter((p) =>
-          [p.name, p.description, p.material, p.pattern, p.color, p.category].join(" ").toLowerCase().includes(q)
-        );
-        pool = matched.length ? matched : PRODUCTS;
-      }
-      const shuffled = [...pool].sort(() => Math.random() - 0.5).slice(0, Math.min(8, pool.length));
-      const withScores = shuffled
-        .map((p) => ({ ...p, similarity: (80 + Math.random() * 19).toFixed(1) }))
-        .sort((a, b) => b.similarity - a.similarity);
+  setSelectedFile(file);
 
-      const now = new Date();
-      setResults(withScores);
-      setAnalytics({
-        mode: startedTab === "image" ? "Image Search" : "Text Search",
-        time: (0.15 + Math.random() * 0.25).toFixed(2),
-        catalogueSize: 15284,
-        model: "FashionSigLIP",
-        bestMatch: withScores[0]?.similarity,
-        timestamp: now.toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }),
-      });
-      setRecentSearches((prev) => [
-        {
-          id: now.getTime(),
-          mode: startedTab === "image" ? "Image Search" : "Text Search",
-          thumbnail: startedTab === "image" ? startedImage : null,
-          query: startedQuery,
-          tab: startedTab,
-          image: startedImage,
-          dateLabel: now.toLocaleDateString(undefined, { month: "short", day: "numeric" }),
-          timeLabel: now.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }),
-        },
-        ...prev,
-      ].slice(0, 6));
-      setIsSearching(false);
-    }, 1100);
+  const reader = new FileReader();
+
+  reader.onload = (e) => {
+    setImagePreview(e.target.result);
+  };
+
+  reader.readAsDataURL(file);
+}
+async function runSearch() {
+  if (tab === "image" && !selectedFile) return;
+
+  setIsSearching(true);
+  setResults(null);
+  setAnalytics(null);
+
+  const startTime = performance.now();
+
+  try {
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+
+    const response = await fetch("http://127.0.0.1:8000/api/search", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error(`Search failed: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (!data.success) {
+      throw new Error("Backend search was unsuccessful.");
+    }
+
+    const searchTime = ((performance.now() - startTime) / 1000).toFixed(2);
+
+    const backendResults = data.results.map((item, index) => {
+      const path = item.image.replace(/\\/g, "/");
+
+      const filename = path.split("/").pop();
+      const sku = path.split("/").slice(-2, -1)[0];
+
+      return {
+        id: sku + "-" + index,
+        sku: sku,
+        name: sku,
+        category: "Lace",
+        pattern: "Visual Match",
+        color: "—",
+                description: `AI visual match from the lace catalogue.`,
+        applications: ["Visual Search"],
+        similarity: (item.score * 100).toFixed(1),
+        imageUrl: `http://127.0.0.1:8000/catalogue/${sku}/${filename}`,
+      };
+    });
+
+    setResults(backendResults);
+
+    setAnalytics({
+      mode: "Image Search",
+      time: searchTime,
+      catalogueSize: backendResults.length,
+      model: "FashionSigLIP",
+      bestMatch: backendResults[0]?.similarity,
+    });
+
+  } catch (error) {
+    console.error("Search error:", error);
+    alert(`Search error: ${error.message}`);
+  } finally {
+    setIsSearching(false);
   }
+}
+
 
   function restoreSearch(s) {
     setTab(s.tab);
@@ -789,7 +781,12 @@ function HomePage({ onViewProduct }) {
             ].map((t) => (
               <button
                 key={t.key}
-                onClick={() => { setTab(t.key); setResults(null); setAnalytics(null); }}
+                onClick={() => {
+                  setImagePreview(null);
+                  setSelectedFile(null);
+                  setResults(null);
+                  setAnalytics(null);
+                }}
                 className={`flex-1 flex items-center justify-center gap-2 text-sm font-medium py-3 rounded-2xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 ${
                   tab === t.key ? "bg-blue-600 text-white shadow-sm" : "text-gray-500 hover:bg-gray-50"
                 }`}
@@ -827,14 +824,19 @@ function HomePage({ onViewProduct }) {
                   <div className="relative rounded-2xl overflow-hidden border border-gray-200">
                     <img src={imagePreview} alt="Uploaded preview" className="w-full max-h-80 object-contain bg-gray-50" />
                     <button
-                      onClick={() => { setImagePreview(null); setResults(null); setAnalytics(null); }}
+                      onClick={() => {
+                        setImagePreview(null);
+                        setSelectedFile(null);
+                        setResults(null);
+                        setAnalytics(null);
+                      }}
                       className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/90 border border-gray-200 flex items-center justify-center hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
                     >
                       <X className="w-4 h-4 text-gray-700" />
                     </button>
                   </div>
                 )}
-                <Btn className="mt-4 w-full" size="lg" variant="primary" disabled={!imagePreview} loading={isSearching} icon={Search} onClick={runSearch}>
+                <Btn className="mt-4 w-full" size="lg" variant="primary" disabled={!selectedFile} loading={isSearching} icon={Search} onClick={runSearch}>
                   {isSearching ? "Searching…" : "Search"}
                 </Btn>
               </div>
