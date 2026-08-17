@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import {
   Search, Image as ImageIcon, Type, Upload, Camera, X, Menu, Home as HomeIcon,
   LayoutGrid, Info, ChevronRight, ChevronLeft, Download, Eye, Loader2, SlidersHorizontal,
-  ArrowLeft, Sparkles, Ruler, Layers, Palette, Grid3x3, Check, ScanSearch,
+  ArrowLeft, Sparkles, Ruler, Layers, Grid3x3, Check, ScanSearch,
   Gauge, ShieldCheck, Zap, Clock, Database, Cpu, Target, Calendar, CheckCircle2,
   History, RotateCcw, ArrowUpRight,
 } from "lucide-react";
@@ -39,109 +39,135 @@ const CATEGORY_META = {
   Other: { dot: "bg-blue-500", label: "Other", text: "text-blue-700", bg: "bg-blue-50", border: "border-blue-200", glow: "#3B82F6" },
 };
 
+const API_BASE_URL = "http://127.0.0.1:8000";
+
+function catalogueImageUrl(path) {
+  const raw = String(path || "").replace(/\\/g, "/");
+  if (!raw) return "";
+  if (raw.startsWith("http://") || raw.startsWith("https://")) return raw;
+  return `${API_BASE_URL}${raw.startsWith("/") ? "" : "/"}${raw}`;
+}
+
+function normalizeCatalogueProduct(item, index = 0) {
+  const productId = item?.product_id || `PRODUCT-${index + 1}`;
+  return {
+    id: productId,
+    sku: productId,
+    name: item?.name || productId,
+    category: item?.category || "Lace",
+    material: item?.material || "—",
+    pattern: item?.pattern || "—",
+    width: item?.width || "—",
+    gsm: item?.gsm || "—",
+    description: item?.description || "Catalogue product.",
+    applications: Array.isArray(item?.applications) ? item.applications : [],
+    imageUrl: catalogueImageUrl(item?.image),
+  };
+}
+
 const PRODUCTS = [
   {
     id: "p1", sku: "LACE-2001", name: "White Floral Scallop Lace", category: "Lace",
     material: "Cotton / Nylon Blend", pattern: "Floral", patternType: "lace-floral",
-    color: "White", colorHex: "#FBFAF7", width: "130 cm", gsm: "85 gsm",
+    width: "130 cm", gsm: "85 gsm",
     description: "Delicate white floral lace with scalloped edges and a soft tulle mesh base, well suited to bridal veils and refined eveningwear.",
     applications: ["Bridal Wear", "Evening Wear"],
   },
   {
     id: "p2", sku: "LACE-2048", name: "White Floral Embroidered Lace", category: "Lace",
     material: "Nylon", pattern: "Floral Embroidery", patternType: "lace-floral",
-    color: "White", colorHex: "#F7F5F0", width: "135 cm", gsm: "90 gsm",
+    width: "135 cm", gsm: "90 gsm",
     description: "White embroidered floral lace with intricate leaf motifs and mesh backing, suitable for bridal and luxury garments.",
     applications: ["Bridal Wear", "Fashion Apparel"],
   },
   {
     id: "p3", sku: "LACE-2102", name: "Black Chantilly Scroll Lace", category: "Lace",
     material: "Polyester", pattern: "Scroll Floral", patternType: "lace-floral",
-    color: "Black", colorHex: "#1C1D20", width: "150 cm", gsm: "95 gsm",
+    width: "150 cm", gsm: "95 gsm",
     description: "Rich black Chantilly-style lace with scrolling floral embroidery, offering dramatic contrast for evening gowns and overlays.",
     applications: ["Evening Wear", "Fashion Apparel"],
   },
   {
     id: "p4", sku: "LACE-2159", name: "Ivory Guipure Cutwork Lace", category: "Lace",
     material: "Cotton", pattern: "Guipure Motif", patternType: "lace-guipure",
-    color: "Ivory", colorHex: "#F1E9D8", width: "45 cm", gsm: "60 gsm",
+    width: "45 cm", gsm: "60 gsm",
     description: "Ivory guipure lace with bold cutwork motifs and a sturdy cotton base, well suited to structured bridal bodices.",
     applications: ["Bridal Wear"],
   },
   {
     id: "p5", sku: "LACE-2210", name: "Blush Corded Net Lace", category: "Lace",
     material: "Nylon", pattern: "Corded Floral", patternType: "lace-corded",
-    color: "Blush Pink", colorHex: "#F3CFD4", width: "130 cm", gsm: "80 gsm",
+    width: "130 cm", gsm: "80 gsm",
     description: "Soft blush lace with corded floral outlines over a fine net ground, lending a romantic finish to occasion wear.",
     applications: ["Evening Wear", "Fashion Apparel"],
   },
   {
     id: "p6", sku: "LACE-2305", name: "Champagne Beaded Lattice Lace", category: "Lace",
     material: "Polyester / Nylon", pattern: "Beaded Floral", patternType: "lace-beaded",
-    color: "Champagne", colorHex: "#E9D6B2", width: "140 cm", gsm: "110 gsm",
+    width: "140 cm", gsm: "110 gsm",
     description: "Champagne lace embellished with hand-placed beading across a floral lattice, designed for statement eveningwear.",
     applications: ["Evening Wear", "Bridal Wear"],
   },
   {
     id: "p7", sku: "FAB-1020", name: "Black Cotton Fabric", category: "Fabric",
     material: "Cotton", pattern: "Solid", patternType: "solid",
-    color: "Black", colorHex: "#212226", width: "150 cm", gsm: "180 gsm",
+    width: "150 cm", gsm: "180 gsm",
     description: "Densely woven black cotton fabric with a smooth matte finish, dependable for tailored apparel and structured linings.",
     applications: ["Fashion Apparel"],
   },
   {
     id: "p8", sku: "FAB-1105", name: "Ivory Silk Charmeuse", category: "Fabric",
     material: "Silk", pattern: "Satin Weave", patternType: "solid",
-    color: "Ivory", colorHex: "#F3ECDD", width: "114 cm", gsm: "60 gsm",
+    width: "114 cm", gsm: "60 gsm",
     description: "Fluid ivory silk charmeuse with a lustrous drape, favored for bias-cut gowns and luxury lingerie.",
     applications: ["Bridal Wear", "Evening Wear"],
   },
   {
     id: "p9", sku: "FAB-1210", name: "Navy Stretch Mesh Fabric", category: "Fabric",
     material: "Nylon / Spandex", pattern: "Mesh", patternType: "mesh",
-    color: "Navy", colorHex: "#202A42", width: "150 cm", gsm: "90 gsm",
+    width: "150 cm", gsm: "90 gsm",
     description: "Four-way stretch navy mesh with a fine open weave, suited to activewear linings and layered eveningwear.",
     applications: ["Fashion Apparel", "Evening Wear"],
   },
   {
     id: "p10", sku: "FAB-1315", name: "Rose Gold Metallic Organza", category: "Fabric",
     material: "Polyester", pattern: "Sheen Solid", patternType: "solid",
-    color: "Rose Gold", colorHex: "#E5BBA4", width: "112 cm", gsm: "45 gsm",
+    width: "112 cm", gsm: "45 gsm",
     description: "Rose gold organza with a crisp hand and subtle metallic sheen, adding structure and shimmer to eveningwear silhouettes.",
     applications: ["Evening Wear"],
   },
   {
     id: "p11", sku: "FAB-1420", name: "Charcoal Wool Blend Suiting", category: "Fabric",
     material: "Wool / Polyester", pattern: "Herringbone", patternType: "herringbone",
-    color: "Charcoal", colorHex: "#3A3A3C", width: "150 cm", gsm: "260 gsm",
+    width: "150 cm", gsm: "260 gsm",
     description: "Charcoal wool-blend suiting in a fine herringbone weave, tailored for structured jackets and outerwear.",
     applications: ["Fashion Apparel"],
   },
   {
     id: "p12", sku: "FAB-1512", name: "Emerald Velvet Fabric", category: "Fabric",
     material: "Polyester Pile", pattern: "Solid Velvet", patternType: "velvet",
-    color: "Emerald", colorHex: "#164B3C", width: "140 cm", gsm: "320 gsm",
+    width: "140 cm", gsm: "320 gsm",
     description: "Deep emerald velvet with a dense, light-catching pile, chosen for opulent eveningwear and upholstered home accents.",
     applications: ["Evening Wear", "Home Decor"],
   },
   {
     id: "p13", sku: "ACC-201", name: "Decorative Pearl Trim", category: "Other",
     material: "Pearl / Cotton Tape", pattern: "Beaded", patternType: "sequin",
-    color: "White", colorHex: "#F5F3EE", width: "2 cm", gsm: "30 gsm",
+    width: "2 cm", gsm: "30 gsm",
     description: "Hand-strung pearl trim on a cotton tape base, used to finish necklines and bridal accessories with subtle shine.",
     applications: ["Bridal Wear"],
   },
   {
     id: "p14", sku: "ACC-215", name: "Burgundy Satin Ribbon Trim", category: "Other",
     material: "Polyester Satin", pattern: "Solid", patternType: "solid",
-    color: "Burgundy", colorHex: "#5E1E29", width: "2.5 cm", gsm: "25 gsm",
+    width: "2.5 cm", gsm: "25 gsm",
     description: "Lustrous burgundy satin ribbon with a smooth double face, suited to sashes, trims and gift packaging.",
     applications: ["Fashion Apparel", "Home Decor"],
   },
   {
     id: "p15", sku: "ACC-230", name: "Gold Sequin Fringe Trim", category: "Other",
     material: "Polyester Sequin", pattern: "Sequined", patternType: "sequin",
-    color: "Gold", colorHex: "#C9A227", width: "5 cm", gsm: "50 gsm",
+    width: "5 cm", gsm: "50 gsm",
     description: "Gold sequin fringe trim with continuous shimmer and movement, popular for dancewear and statement hemlines.",
     applications: ["Evening Wear", "Fashion Apparel"],
   },
@@ -269,11 +295,12 @@ function Btn({ as: As = "button", variant = "primary", size = "md", loading = fa
 /* ---------------------------------------------------------------------- */
 
 function CategoryDot({ category, className = "" }) {
-  return <span className={`inline-block w-2.5 h-2.5 rounded-full ${CATEGORY_META[category].dot} ${className}`} />;
+  const meta = CATEGORY_META[category] || CATEGORY_META.Other;
+  return <span className={`inline-block w-2.5 h-2.5 rounded-full ${meta.dot} ${className}`} />;
 }
 
 function CategoryBadge({ category }) {
-  const m = CATEGORY_META[category];
+  const m = CATEGORY_META[category] || CATEGORY_META.Other;
   return (
     <span className={`inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-sm border border-white/60 shadow-sm ${m.text}`}>
       <span className={`w-1.5 h-1.5 rounded-full ${m.dot}`} />
@@ -313,7 +340,6 @@ function AttributeGrid({ product, compact = false }) {
   const attrs = [
     { icon: Layers, label: "Material", value: product.material },
     { icon: Grid3x3, label: "Pattern", value: product.pattern },
-    { icon: Palette, label: "Color", value: product.color },
     { icon: Ruler, label: "Width", value: product.width },
     { icon: Gauge, label: "GSM", value: product.gsm },
   ];
@@ -336,7 +362,6 @@ function SpecTable({ product }) {
   const rows = [
     { icon: Layers, label: "Material", value: product.material },
     { icon: Grid3x3, label: "Pattern", value: product.pattern },
-    { icon: Palette, label: "Color", value: product.color },
     { icon: Ruler, label: "Width", value: product.width },
     { icon: Gauge, label: "GSM", value: product.gsm },
     { icon: Layers, label: "Category", value: product.category },
@@ -376,10 +401,7 @@ function Navbar({ page, goTo, mobileOpen, setMobileOpen }) {
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex items-center justify-between h-16">
           <button onClick={() => goTo("home")} className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded-lg">
-            <span className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105">
-              <ScanSearch className="w-4 h-4 text-white" />
-            </span>
-            <span className="text-[15px] md:text-base font-semibold text-gray-900 tracking-tight" style={fontDisplay}>
+            <span className="text-[15px] md:text-base font-semibold text-black tracking-tight" style={fontDisplay}>
               AI Fabric &amp; Lace <span className="hidden sm:inline">Visual Search</span>
             </span>
           </button>
@@ -479,7 +501,7 @@ function SkeletonCard() {
 
 function ResultCard({ product, onView, style }) {
   const [expanded, setExpanded] = useState(false);
-  const meta = CATEGORY_META[product.category];
+  const meta = CATEGORY_META[product.category] || CATEGORY_META.Other;
 
   return (
     <div
@@ -515,7 +537,7 @@ function ResultCard({ product, onView, style }) {
         >
           <p className="text-[11px] font-semibold uppercase tracking-wide text-white/70 mb-1.5">Why this match?</p>
           <ul className="space-y-0.5 mb-2.5 text-[11px] leading-tight">
-            {["Similar embroidery pattern", "Matching texture", "Similar border style", "Similar colour palette", "Similar motif density"].map((r) => (
+            {["Similar embroidery pattern", "Matching texture", "Similar border style", "Similar motif density"].map((r) => (
               <li key={r} className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3 h-3 text-green-400 flex-shrink-0" /> {r}
               </li>
@@ -527,11 +549,6 @@ function ResultCard({ product, onView, style }) {
             <div>
               <span className="font-medium">Pattern:</span>{" "}
               {product.pattern || "—"}
-            </div>
-
-            <div>
-              <span className="font-medium">Color:</span>{" "}
-              {product.color || "—"}
             </div>
           </div>
 
@@ -573,10 +590,10 @@ function SearchAnalyticsPanel({ analytics, imagePreview, tab }) {
   const metrics = [
     { icon: analytics.mode === "Image Search" ? ImageIcon : Type, label: "Search Mode", value: analytics.mode },
     { icon: Clock, label: "Search Time", value: `${analytics.time}s` },
-    { icon: Database, label: "Catalogue Size", value: `${analytics.catalogueSize.toLocaleString()} Products` },
+    { icon: Database, label: "Indexed Catalogue", value: `${Number(analytics.catalogueSize || 0).toLocaleString()} Images` },
     { icon: Cpu, label: "AI Model", value: analytics.model },
     { icon: Target, label: "Best Match", value: `${analytics.bestMatch}%` },
-    { icon: Calendar, label: "Search Date & Time", value: analytics.timestamp },
+    { icon: Calendar, label: "Search Date & Time", value: analytics.timestamp || "—" },
   ];
 
   const panel = (
@@ -681,73 +698,156 @@ function HomePage({ onViewProduct }) {
   reader.readAsDataURL(file);
 }
 async function runSearch() {
-  if (tab === "image" && !selectedFile) return;
+    if (tab === "image" && !selectedFile) return;
+    if (tab === "text" && !query.trim()) return;
 
-  setIsSearching(true);
-  setResults(null);
-  setAnalytics(null);
+    setIsSearching(true);
+    setResults(null);
+    setAnalytics(null);
 
-  const startTime = performance.now();
+    const startTime = performance.now();
 
-  try {
-    const formData = new FormData();
-    formData.append("file", selectedFile);
+    try {
+      // ================================================================
+      // TEXT SEARCH
+      // ================================================================
+      if (tab === "text") {
+        const response = await fetch(
+          `http://127.0.0.1:8000/api/text-search?q=${encodeURIComponent(query.trim())}&top_k=10`
+        );
 
-    const response = await fetch("http://127.0.0.1:8000/api/search", {
-      method: "POST",
-      body: formData,
-    });
+        if (!response.ok) {
+          throw new Error(`Text search failed: ${response.status}`);
+        }
 
-    if (!response.ok) {
-      throw new Error(`Search failed: ${response.status}`);
+        const data = await response.json();
+
+        if (!data.success) {
+          throw new Error(data.message || "Text search was unsuccessful.");
+        }
+
+        const rawResults = Array.isArray(data.results) ? data.results : [];
+
+        const backendResults = rawResults.map((item, index) => {
+          const rawPath = String(item.image || "").replace(/\\/g, "/");
+          const imageUrl = rawPath
+            ? (rawPath.startsWith("http://") || rawPath.startsWith("https://")
+                ? rawPath
+                : `http://127.0.0.1:8000${rawPath.startsWith("/") ? "" : "/"}${rawPath}`)
+            : "";
+
+          const productId = item.product_id || `RESULT-${index + 1}`;
+
+          return {
+            id: `${productId}-${index}`,
+            sku: productId,
+            name: item.name || productId,
+            category: item.category || "Lace",
+            material: item.material || "—",
+            pattern: item.pattern || "—",
+            width: item.width || "—",
+            gsm: item.gsm || "—",
+            description: item.description || "Catalogue product.",
+            applications:
+              Array.isArray(item.applications) && item.applications.length
+                ? item.applications
+                : [],
+            similarity: undefined,
+            imageUrl,
+          };
+        });
+
+        setResults(backendResults);
+
+        const searchTime = ((performance.now() - startTime) / 1000).toFixed(2);
+
+        setAnalytics({
+          mode: "Text Search",
+          time: searchTime,
+          catalogueSize: data.catalogue_size ?? data.total_products ?? 74,
+          model: "Catalogue Metadata Search",
+          bestMatch: backendResults.length ? "Matched" : "—",
+          timestamp: new Date().toLocaleString([], { dateStyle: "short", timeStyle: "short" }),
+        });
+
+        return;
+      }
+
+      // ================================================================
+      // IMAGE SEARCH
+      // ================================================================
+      const formData = new FormData();
+      formData.append("file", selectedFile);
+
+      const response = await fetch("http://127.0.0.1:8000/api/search", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Image search failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (!data.success) {
+        throw new Error(data.message || "Backend search was unsuccessful.");
+      }
+
+      const rawResults = Array.isArray(data.results) ? data.results : [];
+
+      const backendResults = rawResults.map((item, index) => {
+        const rawPath = String(item.image || "").replace(/\\/g, "/");
+        const imageUrl = rawPath
+          ? (rawPath.startsWith("http://") || rawPath.startsWith("https://")
+              ? rawPath
+              : `http://127.0.0.1:8000${rawPath.startsWith("/") ? "" : "/"}${rawPath}`)
+          : "";
+
+        const productId = item.product_id || `RESULT-${index + 1}`;
+        const rawScore = Number(item.score ?? 0);
+        const similarity = rawScore <= 1
+          ? (rawScore * 100).toFixed(1)
+          : Math.min(rawScore, 100).toFixed(1);
+
+        return {
+          id: `${productId}-${index}`,
+          sku: productId,
+          name: item.name || productId,
+          category: item.category || "Lace",
+          material: item.material || "—",
+          pattern: item.pattern || "—",
+          width: item.width || "—",
+          gsm: item.gsm || "—",
+          description: item.description || "AI visual match from the lace catalogue.",
+          applications:
+            Array.isArray(item.applications) && item.applications.length
+              ? item.applications
+              : ["Visual Search"],
+          similarity,
+          imageUrl,
+        };
+      });
+
+      setResults(backendResults);
+
+      const searchTime = ((performance.now() - startTime) / 1000).toFixed(2);
+
+      setAnalytics({
+        mode: "Image Search",
+        time: searchTime,
+        catalogueSize: data.catalogue_size ?? data.index_size ?? data.total_images ?? 89,
+        model: data.model || "Marqo FashionSigLIP",
+        bestMatch: backendResults[0]?.similarity || "0.0",
+        timestamp: new Date().toLocaleString([], { dateStyle: "short", timeStyle: "short" }),
+      });
+    } catch (error) {
+      console.error("Search error:", error);
+      alert(`Search error: ${error.message}`);
+    } finally {
+      setIsSearching(false);
     }
-
-    const data = await response.json();
-
-    if (!data.success) {
-      throw new Error("Backend search was unsuccessful.");
-    }
-
-    const searchTime = ((performance.now() - startTime) / 1000).toFixed(2);
-
-    const backendResults = data.results.map((item, index) => {
-      const path = item.image.replace(/\\/g, "/");
-
-      const filename = path.split("/").pop();
-      const sku = path.split("/").slice(-2, -1)[0];
-
-      return {
-        id: sku + "-" + index,
-        sku: sku,
-        name: sku,
-        category: "Lace",
-        pattern: "Visual Match",
-        color: "—",
-                description: `AI visual match from the lace catalogue.`,
-        applications: ["Visual Search"],
-        similarity: (item.score * 100).toFixed(1),
-        imageUrl: `http://127.0.0.1:8000/catalogue/${sku}/${filename}`,
-      };
-    });
-
-    setResults(backendResults);
-
-    setAnalytics({
-      mode: "Image Search",
-      time: searchTime,
-      catalogueSize: backendResults.length,
-      model: "FashionSigLIP",
-      bestMatch: backendResults[0]?.similarity,
-    });
-
-  } catch (error) {
-    console.error("Search error:", error);
-    alert(`Search error: ${error.message}`);
-  } finally {
-    setIsSearching(false);
   }
-}
-
 
   function restoreSearch(s) {
     setTab(s.tab);
@@ -782,8 +882,10 @@ async function runSearch() {
               <button
                 key={t.key}
                 onClick={() => {
+                  setTab(t.key);
                   setImagePreview(null);
                   setSelectedFile(null);
+                  setQuery("");
                   setResults(null);
                   setAnalytics(null);
                 }}
@@ -863,7 +965,7 @@ async function runSearch() {
                     </button>
                   ))}
                 </div>
-                <Btn className="mt-4 w-full" size="lg" variant="primary" loading={isSearching} icon={Search} onClick={runSearch}>
+                <Btn className="mt-4 w-full" size="lg" variant="primary" disabled={!query.trim()} loading={isSearching} icon={Search} onClick={runSearch}>
                   {isSearching ? "Searching…" : "Search"}
                 </Btn>
               </div>
@@ -926,16 +1028,26 @@ async function runSearch() {
 /*  Catalogue page                                                          */
 /* ---------------------------------------------------------------------- */
 
-function CataloguePage({ onViewProduct, goTo }) {
+function CataloguePage({ onViewProduct, goTo, products, loading, error }) {
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState([]);
 
-  const toggleFilter = (cat) => setFilters((f) => (f.includes(cat) ? f.filter((c) => c !== cat) : [...f, cat]));
+  const toggleFilter = (cat) =>
+    setFilters((f) =>
+      f.includes(cat) ? f.filter((c) => c !== cat) : [...f, cat]
+    );
 
-  const filtered = PRODUCTS.filter((p) => {
-    const matchesFilter = filters.length === 0 || filters.includes(p.category);
-    const q = query.toLowerCase();
-    const matchesQuery = !q || [p.sku, p.name, p.description].join(" ").toLowerCase().includes(q);
+  const filtered = products.filter((p) => {
+    const matchesFilter =
+      filters.length === 0 || filters.includes(p.category);
+    const q = query.trim().toLowerCase();
+    const matchesQuery =
+      !q ||
+      [p.sku, p.name, p.description, p.material, p.pattern, p.category]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase()
+        .includes(q);
     return matchesFilter && matchesQuery;
   });
 
@@ -947,7 +1059,12 @@ function CataloguePage({ onViewProduct, goTo }) {
         <span className="text-gray-600 font-medium">Catalogue</span>
       </div>
 
-      <h1 className="text-3xl font-semibold text-gray-900 mb-7 tracking-tight" style={fontDisplay}>Browse Catalogue</h1>
+      <div className="flex items-end justify-between gap-4 mb-7">
+        <div>
+          <h1 className="text-3xl font-semibold text-gray-900 tracking-tight" style={fontDisplay}>Browse Catalogue</h1>
+          <p className="text-xs text-gray-400 mt-1">{loading ? "Loading catalogue…" : `${products.length} catalogue products`}</p>
+        </div>
+      </div>
 
       <div className="sticky top-16 z-30 bg-white/90 backdrop-blur-md pt-1 pb-4 -mx-5 px-5">
         <div className="relative mb-4">
@@ -966,6 +1083,8 @@ function CataloguePage({ onViewProduct, goTo }) {
           </span>
           {Object.keys(CATEGORY_META).map((cat) => {
             const active = filters.includes(cat);
+            const count = products.filter((p) => p.category === cat).length;
+            if (count === 0) return null;
             return (
               <button
                 key={cat}
@@ -975,6 +1094,7 @@ function CataloguePage({ onViewProduct, goTo }) {
                 }`}
               >
                 <CategoryDot category={cat} /> {CATEGORY_META[cat].label}
+                <span className="text-gray-400">{count}</span>
                 {active && <Check className="w-3 h-3" />}
               </button>
             );
@@ -982,11 +1102,20 @@ function CataloguePage({ onViewProduct, goTo }) {
         </div>
       </div>
 
+      {error && (
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700 mb-3">
+          Could not load the catalogue from the backend: {error}
+        </div>
+      )}
+
       <div className="rounded-2xl border border-gray-200 overflow-hidden bg-white mt-2">
-        {filtered.length === 0 && (
+        {loading && (
+          <div className="py-16 text-center text-sm text-gray-400">Loading your catalogue…</div>
+        )}
+        {!loading && filtered.length === 0 && (
           <div className="py-16 text-center text-sm text-gray-400">No items match your search.</div>
         )}
-        {filtered.map((p, i) => (
+        {!loading && filtered.map((p, i) => (
           <button
             key={p.id}
             onClick={() => onViewProduct(p, "catalogue")}
@@ -1038,9 +1167,10 @@ function RelatedCarousel({ products, onView }) {
 /*  Product details page                                                    */
 /* ---------------------------------------------------------------------- */
 
-function ProductDetailsPage({ product, source, goTo, onViewProduct }) {
+function ProductDetailsPage({ product, source, goTo, onViewProduct, catalogueProducts }) {
   const similar = useMemo(() => {
-    const others = PRODUCTS.filter((p) => p.category === product.category && p.id !== product.id);
+    const pool = catalogueProducts?.length ? catalogueProducts : [];
+    const others = pool.filter((p) => p.category === product.category && p.id !== product.id);
     const rand = mulberry32(seedFromString(product.sku + "similar"));
     return [...others].sort(() => rand() - 0.5).slice(0, 6).map((p) => ({ ...p, similarity: (75 + rand() * 22).toFixed(1) }));
   }, [product]);
@@ -1104,7 +1234,7 @@ function ProductDetailsPage({ product, source, goTo, onViewProduct }) {
 
           <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3 mt-6">Recommended Applications</h3>
           <div className="flex flex-wrap gap-2 mb-8">
-            {product.applications.map((a) => (
+            {(product.applications || []).map((a) => (
               <span key={a} className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-gray-600">
                 <CheckCircle2 className="w-3.5 h-3.5 text-gray-400" /> {a}
               </span>
@@ -1141,9 +1271,9 @@ function ProductDetailsPage({ product, source, goTo, onViewProduct }) {
 
 function AboutPage({ goTo }) {
   const stats = [
-    { value: "12,000+", label: "Fabric & lace SKUs indexed" },
-    { value: "98.4%", label: "Average match accuracy" },
-    { value: "<1s", label: "Typical search latency" },
+    { value: "89", label: "Catalogue images indexed" },
+    { value: "74", label: "Catalogue products" },
+    { value: "Top-5", label: "Visual matches returned" },
   ];
   const steps = [
     { icon: Upload, title: "Upload or describe", desc: "Provide a photo, sketch or text description of the fabric or lace you're sourcing." },
@@ -1201,6 +1331,35 @@ export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [source, setSource] = useState("catalogue");
+  const [catalogueProducts, setCatalogueProducts] = useState([]);
+  const [catalogueLoading, setCatalogueLoading] = useState(true);
+  const [catalogueError, setCatalogueError] = useState("");
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadCatalogue() {
+      try {
+        setCatalogueLoading(true);
+        setCatalogueError("");
+        const response = await fetch(`${API_BASE_URL}/api/catalogue`);
+        if (!response.ok) throw new Error(`Catalogue request failed: ${response.status}`);
+        const data = await response.json();
+        if (!data.success) throw new Error(data.message || "Catalogue request was unsuccessful.");
+        const items = Array.isArray(data.products) ? data.products : [];
+        if (!cancelled) {
+          setCatalogueProducts(items.map(normalizeCatalogueProduct));
+        }
+      } catch (err) {
+        if (!cancelled) setCatalogueError(err.message || "Unable to load catalogue.");
+      } finally {
+        if (!cancelled) setCatalogueLoading(false);
+      }
+    }
+
+    loadCatalogue();
+    return () => { cancelled = true; };
+  }, []);
 
   function goTo(p) {
     setPage(p);
@@ -1235,10 +1394,24 @@ export default function App() {
 
       <main className="pb-16 md:pb-0">
         {page === "home" && <HomePage onViewProduct={viewProduct} />}
-        {page === "catalogue" && <CataloguePage onViewProduct={viewProduct} goTo={goTo} />}
+        {page === "catalogue" && (
+          <CataloguePage
+            onViewProduct={viewProduct}
+            goTo={goTo}
+            products={catalogueProducts}
+            loading={catalogueLoading}
+            error={catalogueError}
+          />
+        )}
         {page === "about" && <AboutPage goTo={goTo} />}
         {page === "product" && selectedProduct && (
-          <ProductDetailsPage product={selectedProduct} source={source} goTo={goTo} onViewProduct={viewProduct} />
+          <ProductDetailsPage
+            product={selectedProduct}
+            source={source}
+            goTo={goTo}
+            onViewProduct={viewProduct}
+            catalogueProducts={catalogueProducts}
+          />
         )}
       </main>
 

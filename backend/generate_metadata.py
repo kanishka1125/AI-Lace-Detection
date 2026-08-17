@@ -4,52 +4,67 @@ import torch
 from PIL import Image
 from transformers import AutoProcessor, AutoModelForCausalLM
 
-# =========================
+
+# ==========================================
 # PATHS
-# =========================
+# ==========================================
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(
+    os.path.abspath(__file__)
+)
 
-CATALOGUE_DIR = os.path.join(BASE_DIR, "catalogue")
-METADATA_DIR = os.path.join(BASE_DIR, "metadata")
+CATALOGUE_DIR = os.path.join(
+    BASE_DIR,
+    "catalogue"
+)
 
-os.makedirs(METADATA_DIR, exist_ok=True)
-
-OUTPUT_FILE = os.path.join(
-    METADATA_DIR,
+METADATA_FILE = os.path.join(
+    BASE_DIR,
+    "metadata",
     "catalogue_metadata.json"
 )
 
-# =========================
+
+# ==========================================
 # DEVICE
-# =========================
+# ==========================================
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = (
+    "cuda"
+    if torch.cuda.is_available()
+    else "cpu"
+)
 
-print(f"Using device: {device}")
+print("Using device:", device)
 
-# =========================
+
+# ==========================================
 # LOAD EXISTING METADATA
-# =========================
+# ==========================================
 
-if os.path.exists(OUTPUT_FILE):
+print("\nLoading existing metadata...")
 
-    with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-        metadata = json.load(f)
+with open(
+    METADATA_FILE,
+    "r",
+    encoding="utf-8"
+) as f:
 
-    print(f"Existing metadata found: {len(metadata)} records")
+    metadata = json.load(f)
 
-else:
+print(
+    "Products loaded:",
+    len(metadata)
+)
 
-    metadata = {}
 
-# =========================
+# ==========================================
 # LOAD FLORENCE-2
-# =========================
+# ==========================================
 
 MODEL_ID = "microsoft/Florence-2-base"
 
-print("Loading Florence-2...")
+print("\nLoading Florence-2...")
 
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_ID,
@@ -61,83 +76,248 @@ processor = AutoProcessor.from_pretrained(
     trust_remote_code=True
 )
 
+model.eval()
+
 print("Florence-2 loaded!")
 
-# =========================
-# FIND IMAGES
-# =========================
 
-image_files = []
+# ==========================================
+# CREATE SHORT PRODUCT NAME
+# ==========================================
 
-for root, dirs, files in os.walk(CATALOGUE_DIR):
+def create_product_name(
+    product_id,
+    description
+):
 
-    for file in files:
+    text = description.lower()
 
-        if file.lower().endswith(
-            (".jpg", ".jpeg", ".png", ".webp")
-        ):
+    # --------------------------------------
+    # Detect color
+    # --------------------------------------
 
-            image_files.append(
-                os.path.join(root, file)
-            )
+    colors = [
+        "white",
+        "black",
+        "ivory",
+        "cream",
+        "beige",
+        "brown",
+        "blue",
+        "navy",
+        "green",
+        "pink",
+        "blush",
+        "red",
+        "purple",
+        "lavender",
+        "grey",
+        "gray",
+        "gold",
+        "silver",
+        "champagne",
+        "peach",
+        "orange",
+        "yellow"
+    ]
 
-print(f"Found {len(image_files)} images.")
+    detected_color = None
 
-# =========================
-# GENERATE METADATA
-# =========================
+    for color in colors:
 
-for i, image_path in enumerate(image_files, start=1):
+        if color in text:
 
-    relative_path = os.path.relpath(
-        image_path,
-        CATALOGUE_DIR
-    )
+            detected_color = color.title()
+            break
 
-    relative_path = relative_path.replace("\\", "/")
 
-    parts = relative_path.split("/")
+    # --------------------------------------
+    # Detect pattern / style
+    # --------------------------------------
 
-    product_id = parts[0]
+    styles = [
+        ("floral", "Floral"),
+        ("flower", "Floral"),
+        ("embroidered", "Embroidered"),
+        ("embroidery", "Embroidered"),
+        ("geometric", "Geometric"),
+        ("diamond", "Diamond"),
+        ("zigzag", "Zigzag"),
+        ("chevron", "Chevron"),
+        ("scallop", "Scallop"),
+        ("scroll", "Scroll"),
+        ("leaf", "Leaf"),
+        ("leaves", "Leaf"),
+        ("mesh", "Mesh"),
+        ("net", "Net"),
+        ("striped", "Striped"),
+        ("stripe", "Striped"),
+        ("polka", "Polka Dot"),
+        ("lace", "Lace"),
+        ("cutwork", "Cutwork"),
+        ("corded", "Corded"),
+        ("beaded", "Beaded"),
+        ("lattice", "Lattice")
+    ]
 
-    filename = os.path.basename(image_path)
+    detected_styles = []
 
-    # --------------------------------
-    # SKIP IF ALREADY PROCESSED
-    # --------------------------------
+    for keyword, label in styles:
 
-    existing_record = metadata.get(product_id)
+        if keyword in text and label not in detected_styles:
 
-    if existing_record:
+            detected_styles.append(label)
 
-        existing_image = existing_record.get("image", "")
 
-        # Convert /catalogue/X/file.jpeg
-        # into X/file.jpeg
-        existing_image = existing_image.replace(
-            "/catalogue/",
-            ""
-        ).lstrip("/")
+    # --------------------------------------
+    # Build product name
+    # --------------------------------------
 
-        if existing_image == relative_path:
+    parts = []
 
-            print(
-                f"Skipping already processed: "
-                f"{relative_path}"
-            )
+    if detected_color:
+        parts.append(detected_color)
 
-            continue
+    for style in detected_styles:
+
+        if style not in parts:
+
+            parts.append(style)
+
+        if len(parts) >= 3:
+            break
+
+
+    parts.append("Lace")
+
+
+    name = " ".join(parts)
+
+    return name
+
+
+# ==========================================
+# PROCESS ALL PRODUCTS
+# ==========================================
+
+product_ids = list(
+    metadata.keys()
+)
+
+print(
+    "\nProducts to check:",
+    len(product_ids)
+)
+
+
+for i, product_id in enumerate(
+    product_ids,
+    start=1
+):
+
+    product = metadata[
+        product_id
+    ]
 
     print(
-        f"\nProcessing {i}/{len(image_files)}: "
-        f"{relative_path}"
+        f"\nProcessing {i}/{len(product_ids)}: "
+        f"{product_id}"
     )
+
+
+    # ======================================
+    # SKIP PRODUCTS ALREADY COMPLETED
+    # ======================================
+
+    if (
+        product.get("name")
+        and product.get("description")
+    ):
+
+        print(
+            "Skipping already processed:",
+            product_id
+        )
+
+        continue
+
+
+    # ======================================
+    # GET IMAGE PATH
+    # ======================================
+
+    image_path = product.get(
+        "image",
+        ""
+    )
+
+    if not image_path:
+
+        print(
+            "No image path found."
+        )
+
+        continue
+
+
+    image_path = image_path.replace(
+        "\\",
+        "/"
+    )
+
+    image_path = image_path.replace(
+        "/catalogue/",
+        ""
+    )
+
+    image_path = image_path.lstrip("/")
+
+
+    full_image_path = os.path.join(
+        CATALOGUE_DIR,
+        image_path
+    )
+
+
+    # ======================================
+    # CHECK IMAGE
+    # ======================================
+
+    if not os.path.exists(
+        full_image_path
+    ):
+
+        print(
+            "Image not found:",
+            full_image_path
+        )
+
+        continue
+
 
     try:
 
-        image = Image.open(image_path).convert("RGB")
+        # ==================================
+        # LOAD IMAGE
+        # ==================================
 
-        task = "<MORE_DETAILED_CAPTION>"
+        image = Image.open(
+            full_image_path
+        ).convert("RGB")
+
+
+        # ==================================
+        # FLORENCE DETAILED CAPTION
+        # ==================================
+
+        print(
+            "Generating detailed description..."
+        )
+
+        task = (
+            "<MORE_DETAILED_CAPTION>"
+        )
+
 
         inputs = processor(
             text=task,
@@ -145,59 +325,134 @@ for i, image_path in enumerate(image_files, start=1):
             return_tensors="pt"
         )
 
+
         inputs = {
             key: value.to(device)
             for key, value in inputs.items()
         }
 
-        generated_ids = model.generate(
-            input_ids=inputs["input_ids"],
-            pixel_values=inputs["pixel_values"],
-            max_new_tokens=100,
-            num_beams=3
-        )
+
+        with torch.no_grad():
+
+            generated_ids = model.generate(
+                input_ids=inputs[
+                    "input_ids"
+                ],
+                pixel_values=inputs[
+                    "pixel_values"
+                ],
+                max_new_tokens=150,
+                num_beams=3
+            )
+
 
         generated_text = processor.batch_decode(
             generated_ids,
             skip_special_tokens=False
         )[0]
 
-        parsed_answer = processor.post_process_generation(
+
+        parsed = processor.post_process_generation(
             generated_text,
             task=task,
             image_size=image.size
         )
 
-        description = parsed_answer[task]
 
-        # --------------------------------
-        # ADD / UPDATE RECORD
-        # --------------------------------
+        description = parsed.get(
+            task,
+            ""
+        )
 
-        metadata[product_id] = {
 
-            "sku": product_id,
+        if isinstance(
+            description,
+            dict
+        ):
 
-            "image": f"/catalogue/{relative_path}",
+            description = str(
+                description
+            )
 
-            "pattern": "",
 
-            "color": "",
+        description = (
+            description
+            .replace("\n", " ")
+            .strip()
+        )
 
-            "description": description,
 
-            "applications": []
+        # ==================================
+        # CREATE SHORT FRONTEND NAME
+        # ==================================
 
-        }
+        name = create_product_name(
+            product_id,
+            description
+        )
 
-        print("Description:", description)
 
-        # --------------------------------
+        # ==================================
+        # UPDATE METADATA
+        # ==================================
+
+        metadata[product_id][
+            "name"
+        ] = name
+
+        metadata[product_id][
+            "description"
+        ] = description
+
+
+        if "pattern" not in metadata[
+            product_id
+        ]:
+
+            metadata[product_id][
+                "pattern"
+            ] = ""
+
+
+        if "color" not in metadata[
+            product_id
+        ]:
+
+            metadata[product_id][
+                "color"
+            ] = ""
+
+
+        if "applications" not in metadata[
+            product_id
+        ]:
+
+            metadata[product_id][
+                "applications"
+            ] = []
+
+
+        # ==================================
+        # SHOW RESULT
+        # ==================================
+
+        print(
+            "Name:",
+            name
+        )
+
+        print(
+            "Description:",
+            description
+        )
+
+
+        # ==================================
         # SAVE IMMEDIATELY
-        # --------------------------------
+        # ==================================
 
         with open(
-            OUTPUT_FILE,
+            METADATA_FILE,
             "w",
             encoding="utf-8"
         ) as f:
@@ -209,33 +464,34 @@ for i, image_path in enumerate(image_files, start=1):
                 ensure_ascii=False
             )
 
+
         print(
-            f"Saved! Total metadata records: "
-            f"{len(metadata)}"
+            "Saved:",
+            product_id
         )
+
 
     except Exception as e:
 
         print(
-            f"ERROR processing {image_path}: {e}"
+            f"ERROR processing {product_id}: {e}"
         )
 
-# =========================
+
+# ==========================================
 # COMPLETE
-# =========================
+# ==========================================
 
-print("\n================================")
+print("\n========================================")
 print("METADATA GENERATION COMPLETE")
-print("================================")
+print("========================================")
 
 print(
-    f"Found images: {len(image_files)}"
+    "Total products:",
+    len(metadata)
 )
 
 print(
-    f"Metadata records: {len(metadata)}"
-)
-
-print(
-    f"Saved to: {OUTPUT_FILE}"
+    "Metadata saved to:",
+    METADATA_FILE
 )

@@ -1,4 +1,4 @@
-# Embedding----> Nearest Images
+# Image Embedding → Nearest Catalogue Images
 
 import faiss
 import numpy as np
@@ -12,14 +12,26 @@ from .embedding import (
 
 def build_faiss_index(embeddings):
 
+    # Make sure embeddings are float32
+    embeddings = np.asarray(
+        embeddings,
+        dtype=np.float32
+    )
+
+    # Normalize catalogue embeddings
+    faiss.normalize_L2(embeddings)
+
     embedding_dimension = embeddings.shape[1]
 
-    index = faiss.IndexFlatIP(embedding_dimension)
+    # Inner Product on normalized vectors
+    # = Cosine Similarity
+    index = faiss.IndexFlatIP(
+        embedding_dimension
+    )
 
     index.add(embeddings)
 
     return index
-
 
 
 def search(
@@ -32,7 +44,17 @@ def search(
     top_k=5
 ):
 
-    image = load_image(query_image_path)
+    # -----------------------------
+    # Load uploaded image
+    # -----------------------------
+
+    image = load_image(
+        query_image_path
+    )
+
+    # -----------------------------
+    # Preprocess image
+    # -----------------------------
 
     inputs = preprocess_image(
         image,
@@ -40,20 +62,50 @@ def search(
         device
     )
 
+    # -----------------------------
+    # Generate Marqo embedding
+    # -----------------------------
+
     embedding = get_image_embedding(
         model,
         inputs
     )
 
-    faiss.normalize_L2(embedding)
+    embedding = np.asarray(
+        embedding,
+        dtype=np.float32
+    )
 
-    scores, indices = index.search(embedding, top_k)
+    # -----------------------------
+    # Normalize query embedding
+    # -----------------------------
+
+    faiss.normalize_L2(
+        embedding
+    )
+
+    # -----------------------------
+    # Search catalogue
+    # -----------------------------
+
+    scores, indices = index.search(
+        embedding,
+        top_k
+    )
+
+    # -----------------------------
+    # Get matching image paths
+    # -----------------------------
 
     results = []
 
     for idx in indices[0]:
-        results.append(catalogue[idx])
+
+        if idx < 0:
+            continue
+
+        results.append(
+            catalogue[idx]
+        )
 
     return scores, results
-
-
