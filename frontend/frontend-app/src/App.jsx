@@ -863,7 +863,13 @@ async function runSearch() {
         <div className="inline-flex items-center gap-1.5 text-xs font-medium text-blue-700 bg-blue-50 border border-blue-100 rounded-full px-3 py-1.5 mb-7">
           <Sparkles className="w-3.5 h-3.5" /> AI-Powered Visual Matching
         </div>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-900 tracking-tight mb-6 leading-[1.08]" style={fontDisplay}>
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight mb-6 leading-[1.08]"
+          style={{
+            ...fontDisplay,
+            color: "#111827",
+          }}
+        >
           AI Fabric &amp; Lace<br className="hidden sm:block" /> Visual Search
         </h1>
         <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">

@@ -2,11 +2,11 @@
     "LACE1001": {
         "sku": "LACE1001",
         "image": "/catalogue/LACE1001/LACE1001_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Striped",
+        "color": "Ivory",
         "description": "The image shows a piece of black and white fabric with a striped pattern. The fabric appears to be made of a woven material, possibly cotton or a similar material, and has a textured surface. The stripes are evenly spaced and run horizontally across the fabric. There is a small white label on the bottom right corner of the image with black text and a barcode. The label is rectangular in shape and has some information about the fabric, such as its size, weight, and other details. The background is a plain white surface.",
         "applications": [],
-        "name": "Black Striped Lace",
+        "name": "Ivory Striped Guipure Lace",
         "visual_attributes": {
             "color": "Black",
             "pattern": "Striped",
@@ -19,11 +19,11 @@
     "LACE1002": {
         "sku": "LACE1002",
         "image": "/catalogue/LACE1002/LACE1002_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Leaf",
+        "color": "White",
         "description": "The image is a close-up of a white lace fabric with a floral pattern. The fabric appears to be made of a delicate lace-like material and has a delicate and intricate design. The pattern is made up of small, intricate leaves and flowers that are arranged in a symmetrical and symmetrical manner. The leaves are of different sizes and shapes, with some being larger and others smaller. The flowers are also intricately detailed, with each leaf having a unique shape and size. The overall effect is a beautiful and delicate floral design.",
         "applications": [],
-        "name": "Grey Guipure Leaf Motif Lace",
+        "name": "White Leaf Floral Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Leaf Motif",
@@ -36,11 +36,11 @@
     "LACE1003": {
         "sku": "LACE1003",
         "image": "/catalogue/LACE1003/LACE1003_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a white lace fabric with a floral pattern. The lace is intricately designed with a variety of flowers and leaves in different sizes and shapes. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are also intricately detailed, with curved lines and curves that create a sense of depth and dimension. The overall effect is a delicate and intricate design.",
         "applications": [],
-        "name": "Grey Corded Striped Lace",
+        "name": "Ivory Scallop Floral Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Striped",
@@ -53,11 +53,11 @@
     "LACE1004": {
         "sku": "LACE1004",
         "image": "/catalogue/LACE1004/LACE1004_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Leaf",
+        "color": "Green",
         "description": "The image is a close-up of a textured surface. The surface appears to be made up of small, irregularly shaped pieces of lace or fabric. The lace is predominantly white, with some hints of green and brown. The edges of the lace are jagged and uneven, creating a sense of depth and dimension. The overall effect is a delicate and intricate pattern.",
         "applications": [],
-        "name": "Green Corded Floral Lace",
+        "name": "Green Leaf Guipure Lace",
         "visual_attributes": {
             "color": "Green",
             "pattern": "Floral",
@@ -70,11 +70,11 @@
     "LACE1005": {
         "sku": "LACE1005",
         "image": "/catalogue/LACE1005/LACE1005_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a black and white lace pattern. The pattern is made up of a repeating design of small, intricate lines and shapes that create a symmetrical and symmetrical appearance. The lines are arranged in a repeating pattern, creating a sense of depth and dimension. The overall effect is a delicate and intricate design that is reminiscent of a lace or lace-like pattern.",
         "applications": [],
-        "name": "Grey Guipure Chevron Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Chevron",
@@ -87,11 +87,11 @@
     "LACE1006": {
         "sku": "LACE1006",
         "image": "/catalogue/LACE1006/LACE1006_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Net",
+        "color": "Ivory",
         "description": "The image is a close-up of a piece of white lace fabric. The lace appears to be made of a delicate, intricate pattern of small, intricate flowers and leaves. The flowers are arranged in a symmetrical pattern, with each petal and leaf having a unique shape and size. The leaves are also intricately detailed, with some overlapping each other. The overall effect is a beautiful and delicate design that is sure to add a touch of elegance to any outfit.",
         "applications": [],
-        "name": "Grey Chantilly Lace",
+        "name": "Ivory Net Floral Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Plain",
@@ -104,11 +104,11 @@
     "LACE1007": {
         "sku": "LACE1007",
         "image": "/catalogue/LACE1007/LACE1007_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a black and white pattern with a repeating design. The pattern is made up of a series of small, intricate lines and shapes that create a symmetrical and symmetrical appearance. The lines are arranged in a repeating pattern, creating a sense of depth and dimension. The shapes include circles, squares, and rectangles, with some overlapping each other. The overall effect is a delicate and intricate design that is reminiscent of a lace or lace-like pattern.",
         "applications": [],
-        "name": "Black Guipure Chevron Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Black",
             "pattern": "Chevron",
@@ -121,11 +121,11 @@
     "LACE1008": {
         "sku": "LACE1008",
         "image": "/catalogue/LACE1008/LACE1008_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a white lace fabric with a repeating pattern. The fabric appears to be made of a delicate lace-like material with a scalloped edge. The pattern is made up of small, intricate stitches that create a symmetrical design. The stitches are arranged in a repeating manner, creating a sense of depth and dimension. The overall effect is elegant and delicate. The image is in black and white, highlighting the intricate details of the lace.",
         "applications": [],
-        "name": "Grey Guipure Striped Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Striped",
@@ -138,11 +138,11 @@
     "LACE1009": {
         "sku": "LACE1009",
         "image": "/catalogue/LACE1009/LACE1009_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Net",
+        "color": "Grey",
         "description": "The image is a close-up of a textured surface with a black and white color scheme. The texture appears to be made up of small, irregularly shaped lines and shapes that create a pattern. The lines are arranged in a way that creates a sense of depth and dimension, with some overlapping each other. The overall effect is a delicate and intricate design that is reminiscent of a lace or lace-like pattern.",
         "applications": [],
-        "name": "Grey Guipure Chevron Lace",
+        "name": "Grey Net Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Chevron",
@@ -155,11 +155,11 @@
     "LACE1010": {
         "sku": "LACE1010",
         "image": "/catalogue/LACE1010/LACE1010_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Ivory",
         "description": "The image is a close-up of a fabric with a floral pattern. The fabric appears to be made of lace or a similar material, with a white color and a delicate texture. The pattern is made up of small, intricate flowers and leaves in a symmetrical design. The flowers are arranged in a repeating pattern, with some overlapping each other. The leaves are also intricately detailed, with each petal having a different shape and size. The overall effect is a beautiful and delicate floral design.",
         "applications": [],
-        "name": "Grey Chantilly Rose Motif Lace",
+        "name": "Ivory Rose Floral Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Rose Motif",
@@ -172,11 +172,11 @@
     "LACE1011": {
         "sku": "LACE1011",
         "image": "/catalogue/LACE1011/LACE1011_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Striped",
+        "color": "Ivory",
         "description": "The image shows a black and white striped rug with fringes on the edges. The rug appears to be made of a woven material, possibly wool or a similar material, and has a rectangular shape. The stripes are evenly spaced and run horizontally across the rug. There is a white label on the bottom right corner of the rug with black text and a barcode. The label is rectangular in shape and has some information about the rug, such as its size, weight, and other details. The background of the image is a wooden surface, possibly a table or countertop.",
         "applications": [],
-        "name": "Black Striped Lace",
+        "name": "Ivory Striped Fabric",
         "visual_attributes": {
             "color": "Black",
             "pattern": "Striped",
@@ -189,11 +189,11 @@
     "LACE1012": {
         "sku": "LACE1012",
         "image": "/catalogue/LACE1012/LACE1012_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Ivory",
         "description": "The image is a close-up of a piece of white lace fabric. The lace is intricately designed with a floral pattern. The pattern is made up of small flowers and leaves, creating a delicate and intricate design. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are also intricately detailed, with curved lines and curves. The fabric appears to be made of a soft, textured material, possibly lace, and has a subtle sheen. The overall effect is elegant and delicate.",
         "applications": [],
-        "name": "Grey Chantilly Lace",
+        "name": "Ivory Rose Floral Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Plain",
@@ -206,11 +206,11 @@
     "LACE1013": {
         "sku": "LACE1013",
         "image": "/catalogue/LACE1013/LACE1013_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Red",
         "description": "The image shows a close-up of a piece of fabric with a striped pattern. The fabric appears to be made of a woven material, possibly cotton or a similar material, and has a red and black color scheme. The stripes are evenly spaced and run horizontally across the fabric. On the right side of the image, there is a white label with black text that reads \"Made in the USA\". The label also has a barcode and some information about the fabric, such as its size, weight, and other details. The background is a plain white surface.",
         "applications": [],
-        "name": "Red Striped Lace",
+        "name": "Red Rose Guipure Lace",
         "visual_attributes": {
             "color": "Red",
             "pattern": "Striped",
@@ -223,11 +223,11 @@
     "LACE1014": {
         "sku": "LACE1014",
         "image": "/catalogue/LACE1014/LACE1014_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Zigzag",
+        "color": "Blue",
         "description": "The image shows a blue and white striped rug on a wooden floor. The rug has a zigzag pattern with alternating white and blue stripes. The stripes are evenly spaced and run horizontally across the rug. On the right side of the rug, there is a white label with black text and a barcode. The label appears to be a label for a product or service.",
         "applications": [],
-        "name": "Blue Zigzag Lace",
+        "name": "Blue Zigzag Guipure Lace",
         "visual_attributes": {
             "color": "Blue",
             "pattern": "Zigzag",
@@ -240,11 +240,11 @@
     "LACE1015": {
         "sku": "LACE1015",
         "image": "/catalogue/LACE1015/LACE1015_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a white lace fabric with a repeating pattern. The lace appears to be made of a delicate, intricate design with small, intricate details. The pattern is symmetrical and covers the entire surface of the fabric. The colors of the lace are predominantly white, with some hints of gray and black. The overall effect is a delicate and elegant look.",
         "applications": [],
-        "name": "Grey Guipure Chevron Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Chevron",
@@ -257,11 +257,11 @@
     "LACE1016": {
         "sku": "LACE1016",
         "image": "/catalogue/LACE1016/LACE1016_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Striped",
+        "color": "Ivory",
         "description": "The image shows a rectangular piece of fabric with a black and white striped pattern. The fabric appears to be made of a woven material, possibly cotton or a similar material, and has a textured surface. The stripes are evenly spaced and run horizontally across the fabric. On the right side of the image, there is a white label with black text and a barcode. The label is placed on a wooden surface, and there are a few pieces of fabric scattered around it.",
         "applications": [],
-        "name": "Navy Striped Lace",
+        "name": "Ivory Striped Fabric",
         "visual_attributes": {
             "color": "Navy",
             "pattern": "Striped",
@@ -274,11 +274,11 @@
     "LACE1017": {
         "sku": "LACE1017",
         "image": "/catalogue/LACE1017/LACE1017_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Striped",
+        "color": "Ivory",
         "description": "The image shows a close-up of a piece of fabric with a black and white striped pattern. The fabric appears to be made of a woven material, possibly cotton or a similar material, and has a textured surface. The stripes are evenly spaced and run horizontally across the fabric. On the right side of the image, there is a white label with black text and a barcode. The label is placed on a white surface, possibly a table or countertop.",
         "applications": [],
-        "name": "Black Striped Lace",
+        "name": "Ivory Striped Fabric",
         "visual_attributes": {
             "color": "Black",
             "pattern": "Striped",
@@ -291,11 +291,11 @@
     "LACE1018": {
         "sku": "LACE1018",
         "image": "/catalogue/LACE1018/LACE1018_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Floral",
+        "color": "Ivory",
         "description": "The image is a close-up of a black and white lace fabric. The fabric appears to be made of a delicate lace-like material with a floral pattern. The pattern is made up of small, intricate flowers and leaves in various shades of white. The flowers are arranged in a symmetrical and symmetrical manner, with some overlapping each other. The leaves are also intricately detailed, with curved lines and curves that create a sense of depth and dimension. The overall effect is a beautiful and elegant design.",
         "applications": [],
-        "name": "Navy Chantilly Floral Lace",
+        "name": "Ivory Floral Floral Lace",
         "visual_attributes": {
             "color": "Navy",
             "pattern": "Floral",
@@ -308,11 +308,11 @@
     "LACE1019": {
         "sku": "LACE1019",
         "image": "/catalogue/LACE1019/LACE1019_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a black and white photograph of a piece of fabric with a lace-like pattern. The fabric appears to be made of a delicate lace fabric with intricate details and patterns. The pattern is made up of multiple layers of lace, with the top layer being the largest and the bottom layer being smaller. The lace is arranged in a zigzag line, creating a wave-like effect. The edges of the fabric are frayed, giving it a textured appearance. The background of the image is black, making the white lace stand out.",
         "applications": [],
-        "name": "Grey Chantilly Zigzag Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Zigzag",
@@ -325,11 +325,11 @@
     "LACE1020": {
         "sku": "LACE1020",
         "image": "/catalogue/LACE1020/LACE1020_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a black and white lace pattern. The pattern is made up of a repeating design of wavy lines and curves, creating a zigzag-like effect. The lines are evenly spaced and run diagonally across the image. The overall effect is a delicate and intricate design that is reminiscent of a lace or lace-like pattern.",
         "applications": [],
-        "name": "Silver Guipure Chevron Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Silver",
             "pattern": "Chevron",
@@ -342,11 +342,11 @@
     "LACE1021": {
         "sku": "LACE1021",
         "image": "/catalogue/LACE1021/LACE1021_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Zigzag",
+        "color": "Yellow",
         "description": "The image shows a close-up of a piece of fabric with a yellow and white striped pattern. The fabric appears to be made of cotton or a similar material and has a textured surface. The pattern is made up of small, intricate stitches that create a zigzag-like design. The stitches are arranged in a repeating pattern, creating a sense of depth and dimension. On the right side of the image, there is a white label with black text that reads \"Made in the USA\". The label also has a barcode and some information about the fabric.",
         "applications": [],
-        "name": "Yellow Zigzag Lace",
+        "name": "Yellow Zigzag Guipure Lace",
         "visual_attributes": {
             "color": "Yellow",
             "pattern": "Zigzag",
@@ -359,11 +359,11 @@
     "LACE1022": {
         "sku": "LACE1022",
         "image": "/catalogue/LACE1022/LACE1022_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Mesh",
+        "color": "White",
         "description": "The image is a black and white photograph of a lace pattern. The pattern is made up of small, intricate flowers and leaves that are arranged in a symmetrical manner. The flowers are white and appear to be made of a delicate, lace-like material. The leaves are also white and are scattered throughout the pattern, creating a sense of depth and dimension. The background is a solid black color, making the pattern stand out even more. The overall effect is a delicate and intricate design.",
         "applications": [],
-        "name": "Grey Guipure Diamond Lace",
+        "name": "White Mesh Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Diamond",
@@ -376,11 +376,11 @@
     "LACE1023": {
         "sku": "LACE1023",
         "image": "/catalogue/LACE1023/LACE1023_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Striped",
+        "color": "Ivory",
         "description": "The image shows a piece of black and white striped fabric lying on a white wooden floor. The fabric appears to be made of a woven material, possibly cotton or a similar material, and has a textured surface. The stripes are evenly spaced and run horizontally across the fabric. There is a small white label on the bottom right corner of the image, which is likely a label for the fabric's specifications. The label has a black border and white text.",
         "applications": [],
-        "name": "Cream Striped Lace",
+        "name": "Ivory Striped Fabric",
         "visual_attributes": {
             "color": "Cream",
             "pattern": "Striped",
@@ -393,11 +393,11 @@
     "LACE1024": {
         "sku": "LACE1024",
         "image": "/catalogue/LACE1024/LACE1024_0.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a black and white lace pattern. The pattern is made up of a repeating design of small, intricate flowers and leaves. The flowers are arranged in a symmetrical pattern, with each flower having a unique shape and size. The leaves are also intricately detailed, with curved lines and curves that create a sense of depth and dimension. The overall effect is a delicate and intricate design.",
         "applications": [],
-        "name": "Grey Guipure Chevron Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Chevron",
@@ -410,11 +410,11 @@
     "TESTIMG0001": {
         "sku": "TESTIMG0001",
         "image": "/catalogue/TESTIMG0001/source-002.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image shows a close-up of a piece of white fabric with a delicate lace pattern. The fabric appears to be made of a soft, textured material and has a slightly wrinkled texture. The pattern is made up of small, diamond-shaped stitches that create a symmetrical design. The edges of the fabric are slightly frayed, giving it a textured appearance. The background is plain white, making the fabric stand out.",
         "applications": [],
-        "name": "Cream Lattice Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Cream",
             "pattern": "Lattice",
@@ -427,11 +427,11 @@
     "TESTIMG0002": {
         "sku": "TESTIMG0002",
         "image": "/catalogue/TESTIMG0002/source-003.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Grey",
         "description": "The image is a close-up of a beige-colored fabric with a diamond pattern. The fabric appears to be made of a soft, textured material and has a subtle sheen to it. The diamond pattern is made up of small, evenly spaced diamonds that are arranged in a repeating pattern, creating a diamond shape. The diamonds are evenly spaced and run horizontally across the fabric. The overall effect is a delicate and intricate design.",
         "applications": [],
-        "name": "Beige Guipure Lattice Lace",
+        "name": "Grey Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Beige",
             "pattern": "Lattice",
@@ -444,11 +444,11 @@
     "TESTIMG0003": {
         "sku": "TESTIMG0003",
         "image": "/catalogue/TESTIMG0003/source-004.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a beige-colored fabric with a textured pattern. The fabric appears to be made of a soft, silky material and has a subtle sheen to it. The pattern is made up of small, irregularly shaped dots that are arranged in a repeating pattern, creating a sense of depth and dimension. The dots are evenly spaced and vary in size and shape, with some being larger and others being smaller. The overall effect is a delicate and intricate design that adds a touch of elegance to the fabric.",
         "applications": [],
-        "name": "Grey Guipure Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Plain",
@@ -461,11 +461,11 @@
     "TESTIMG0004": {
         "sku": "TESTIMG0004",
         "image": "/catalogue/TESTIMG0004/source-005.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image shows a close-up of a piece of white lace fabric. The fabric appears to be made of a delicate, lace-like material with a floral pattern. The pattern is made up of small, intricate stitches that create a symmetrical design. The edges of the fabric are slightly frayed, giving it a textured appearance. On the right side of the image, there is a label that reads \"Rishti Vastra Vapar Pvt Ltd.\" The label also has some information about the fabric, such as its size, weight, and other specifications.",
         "applications": [],
-        "name": "Beige Net Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Beige",
             "pattern": "Plain",
@@ -478,11 +478,11 @@
     "TESTIMG0005": {
         "sku": "TESTIMG0005",
         "image": "/catalogue/TESTIMG0005/source-006.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Leaf",
+        "color": "Ivory",
         "description": "The image shows a close-up of a piece of fabric with a white lace pattern. The fabric appears to be made of a soft, textured material and has a delicate, floral design. The pattern is made up of small, intricate lines and shapes that create a symmetrical and symmetrical design. On the right side of the image, there is a small white label with black text that reads \"Rish Vastra Vyapur Pvt Ltd.\" The label also has a barcode and some information about the fabric. The background is plain white, making the fabric stand out.",
         "applications": [],
-        "name": "Cream Chantilly Leaf Motif Lace",
+        "name": "Ivory Leaf Floral Lace",
         "visual_attributes": {
             "color": "Cream",
             "pattern": "Leaf Motif",
@@ -495,11 +495,11 @@
     "TESTIMG0006": {
         "sku": "TESTIMG0006",
         "image": "/catalogue/TESTIMG0006/source-007.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a piece of white lace fabric. The lace appears to be made of a delicate, intricate pattern with a floral design in the center. The pattern is made up of small, intricate stitches that create a textured, lace-like appearance. The edges of the lace are slightly frayed, giving it a worn and weathered look. The fabric is laid flat on a white background, making the lace stand out even more. The overall effect is one of elegance and sophistication.",
         "applications": [],
-        "name": "Cream Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Cream",
             "pattern": "Plain",
@@ -512,11 +512,11 @@
     "TESTIMG0007": {
         "sku": "TESTIMG0007",
         "image": "/catalogue/TESTIMG0007/source-009.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Geometric",
+        "color": "Ivory",
         "description": "The image is a close-up of a piece of fabric with a textured pattern. The fabric appears to be made of a light-colored material, possibly cotton or linen, and has a slightly wrinkled texture. The pattern is made up of small, irregularly shaped lines and dots, creating a zigzag-like design. The lines are evenly spaced and run horizontally across the fabric. The overall appearance of the fabric is delicate and delicate.",
         "applications": [],
-        "name": "Beige Diamond Lace",
+        "name": "Ivory Geometric Embroidered Lace",
         "visual_attributes": {
             "color": "Beige",
             "pattern": "Diamond",
@@ -529,11 +529,11 @@
     "TESTIMG0008": {
         "sku": "TESTIMG0008",
         "image": "/catalogue/TESTIMG0008/source-010.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image shows a close-up of a piece of white fabric with a delicate lace pattern. The fabric appears to be made of a soft, textured material and has a subtle sheen to it. The pattern is made up of small, diamond-shaped flowers and leaves, creating a symmetrical design. The flowers are arranged in a repeating pattern, with some overlapping each other. On the right side of the image, there is a label that reads \"Rishi Vastra Vapar Pvt. Ltd.\" The label also has some information about the fabric, such as its size, weight, and other specifications.",
         "applications": [],
-        "name": "Cream Lattice Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Cream",
             "pattern": "Lattice",
@@ -546,11 +546,11 @@
     "TESTIMG0009": {
         "sku": "TESTIMG0009",
         "image": "/catalogue/TESTIMG0009/source-011.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Red",
         "description": "The image is a close-up of a red and white checkered fabric. The fabric appears to be made of cotton or a similar material and has a grid-like pattern. The squares are evenly spaced and run horizontally across the fabric, creating a uniform and uniform appearance. The color of the fabric is a deep, rich red, with the red being the dominant color. The image is taken from a top-down perspective, looking down on the fabric.",
         "applications": [],
-        "name": "Red Lattice Lace",
+        "name": "Red Rose Fabric",
         "visual_attributes": {
             "color": "Red",
             "pattern": "Lattice",
@@ -563,11 +563,11 @@
     "TESTIMG0010": {
         "sku": "TESTIMG0010",
         "image": "/catalogue/TESTIMG0010/source-012.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Plain",
+        "color": "Blue",
         "description": "The image is a close-up of a fabric with a checkered pattern. The fabric appears to be made of cotton or a similar material and has a light blue and white color scheme. The pattern is made up of small squares of different sizes and colors, creating a grid-like design. The squares are evenly spaced and run horizontally across the fabric. The edges of the fabric are slightly frayed, giving it a textured appearance.",
         "applications": [],
-        "name": "Blue Lattice Lace",
+        "name": "Blue Fabric",
         "visual_attributes": {
             "color": "Blue",
             "pattern": "Lattice",
@@ -580,11 +580,11 @@
     "TESTIMG0011": {
         "sku": "TESTIMG0011",
         "image": "/catalogue/TESTIMG0011/source-013.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image shows a close-up of a piece of fabric with a label on it. The fabric appears to be made of a beige-colored lace-like material with a textured pattern. The label has a white background with black text and a black and white image of a person's face. The text on the label reads \"Rishi Vastra Vapar Pvt. Ltd.\" The label also has a barcode and the company's name and contact information. The image is taken from a top-down perspective, looking down on the fabric.",
         "applications": [],
-        "name": "Beige Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Beige",
             "pattern": "Plain",
@@ -597,11 +597,11 @@
     "TESTIMG0012": {
         "sku": "TESTIMG0012",
         "image": "/catalogue/TESTIMG0012/source-014.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Plain",
+        "color": "Purple",
         "description": "The image shows a folded piece of fabric with a purple and white checkered pattern. The fabric appears to be made of cotton or a similar material and has a slightly wrinkled texture. On the right side of the image, there is a white label with black text that reads \"Rishi Vastra Vapar Pvt Ltd.\" The label also has a small illustration of a bird on it. The background is white.",
         "applications": [],
-        "name": "Lavender Lace",
+        "name": "Purple Fabric",
         "visual_attributes": {
             "color": "Lavender",
             "pattern": "Plain",
@@ -614,11 +614,11 @@
     "TESTIMG0013": {
         "sku": "TESTIMG0013",
         "image": "/catalogue/TESTIMG0013/source-022.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Embroidered",
+        "color": "Blue",
         "description": "The image is a close-up of a fabric with a floral design. The fabric appears to be made of a light grey material and has a subtle texture. The design is made up of various types of flowers and leaves in different shades of blue, black, and yellow. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are also made of black and silver sequins, creating a shimmering effect. The overall effect is a beautiful and intricate floral pattern.",
         "applications": [],
-        "name": "Navy Beaded Leaf Motif Lace",
+        "name": "Blue Embroidered Embroidered Lace",
         "visual_attributes": {
             "color": "Navy",
             "pattern": "Leaf Motif",
@@ -631,11 +631,11 @@
     "TESTIMG0014": {
         "sku": "TESTIMG0014",
         "image": "/catalogue/TESTIMG0014/source-028.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image shows a close-up of a piece of white fabric with a delicate lace pattern. The fabric appears to be made of a soft, textured material and has a subtle sheen to it. The pattern is made up of small, intricate swirls and curves that create a symmetrical design. The edges of the fabric are slightly frayed, giving it a textured appearance. On the right side of the image, there is a label that reads \"Rishi Vastra Vapar PVT. LTD.\" The label also has a barcode and some information about the fabric, such as its size, weight, and other specifications.",
         "applications": [],
-        "name": "Beige Guipure Scroll Motif Lace",
+        "name": "Ivory Scallop Guipure Lace",
         "visual_attributes": {
             "color": "Beige",
             "pattern": "Scroll Motif",
@@ -648,11 +648,11 @@
     "TESTIMG0015": {
         "sku": "TESTIMG0015",
         "image": "/catalogue/TESTIMG0015/source-017.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Zigzag",
+        "color": "Pink",
         "description": "The image is a close-up of a pink fabric with a textured surface. The fabric appears to be made of a soft, silky material and has a subtle sheen to it. The stripes are evenly spaced and run horizontally across the fabric, creating a diagonal pattern. The color of the fabric is a bright, vibrant shade of pink. The image is taken from a top-down perspective, looking down on the fabric.",
         "applications": [],
-        "name": "Pink Striped Lace",
+        "name": "Pink Zigzag Fabric",
         "visual_attributes": {
             "color": "Pink",
             "pattern": "Striped",
@@ -665,11 +665,11 @@
     "TESTIMG0016": {
         "sku": "TESTIMG0016",
         "image": "/catalogue/TESTIMG0016/source-018.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a piece of fabric with a textured pattern. The fabric appears to be made of a light-colored material, possibly cotton or linen, and has a subtle sheen. The pattern is made up of small, irregularly shaped lines that create a zigzag-like design. The lines are evenly spaced and run horizontally across the fabric, creating a sense of depth and dimension. The overall effect is a subtle, textured appearance.",
         "applications": [],
-        "name": "Cream Lattice Lace",
+        "name": "Ivory Scallop Mesh Lace",
         "visual_attributes": {
             "color": "Cream",
             "pattern": "Lattice",
@@ -682,11 +682,11 @@
     "TESTIMG0017": {
         "sku": "TESTIMG0017",
         "image": "/catalogue/TESTIMG0017/source-019.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "White",
         "description": "The image shows a close-up of a piece of white fabric with a textured pattern. The fabric appears to be made of a soft, silky material and has a subtle sheen. The pattern is made up of small, irregularly shaped lines that create a diamond-like design. The lines are arranged in a repeating pattern, creating a sense of depth and dimension. On the right side of the image, there is a label that reads \"Rishi Vastra Vyapar Pvt. Ltd.\" The label also has some information about the fabric, such as its size, weight, and other specifications. The background is a plain white surface.",
         "applications": [],
-        "name": "Grey Mesh Diamond Lace",
+        "name": "White Scallop Mesh Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Diamond",
@@ -699,11 +699,11 @@
     "TESTIMG0018": {
         "sku": "TESTIMG0018",
         "image": "/catalogue/TESTIMG0018/source-020.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Striped",
+        "color": "Purple",
         "description": "The image is a close-up of a fabric with a vertical striped pattern. The stripes are evenly spaced and vary in width and thickness. The colors of the stripes are predominantly blue and white, with some areas being lighter and others being darker. The fabric appears to be made of a soft, textured material, possibly cotton or linen. The image is taken from a top-down perspective, looking down on the stripes.",
         "applications": [],
-        "name": "Lavender Striped Lace",
+        "name": "Purple Striped Fabric",
         "visual_attributes": {
             "color": "Lavender",
             "pattern": "Striped",
@@ -716,11 +716,11 @@
     "TESTIMG0019": {
         "sku": "TESTIMG0019",
         "image": "/catalogue/TESTIMG0019/source-021.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "White",
         "description": "The image is a close-up of a black and white lace fabric. The lace is intricately designed with a floral pattern in the center. The pattern is made up of various shapes and sizes of flowers and leaves, creating a delicate and intricate design. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are also intricately detailed, with curved lines and curves that create a sense of depth and dimension. The overall effect is one of elegance and sophistication.",
         "applications": [],
-        "name": "Grey Corded Floral Lace",
+        "name": "White Rose Floral Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Floral",
@@ -733,11 +733,11 @@
     "TESTIMG0020": {
         "sku": "TESTIMG0020",
         "image": "/catalogue/TESTIMG0020/source-023.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image is a close-up of a piece of white fabric with a floral pattern. The fabric appears to be made of a soft, silky material and has a delicate texture. The pattern is made up of small, intricate swirls and curves that create a sense of movement and depth. The swirls are arranged in a symmetrical manner, with some overlapping each other. The center of the pattern is a darker shade of white, while the rest of the design is a lighter shade of pink. The overall effect is a beautiful and delicate piece of art.",
         "applications": [],
-        "name": "Blush Cutwork Lace",
+        "name": "Ivory Scallop Embroidered Lace",
         "visual_attributes": {
             "color": "Blush",
             "pattern": "Plain",
@@ -750,11 +750,11 @@
     "TESTIMG0021": {
         "sku": "TESTIMG0021",
         "image": "/catalogue/TESTIMG0021/source-024.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Plain",
+        "color": "Purple",
         "description": "The image shows a piece of pink fabric with small white polka dots scattered across it. The fabric appears to be made of a soft, silky material and has a slightly wrinkled texture. The dots are evenly spaced and run horizontally across the fabric. The background is a plain white surface, which contrasts with the bright pink color of the fabric and makes it stand out.",
         "applications": [],
-        "name": "Pink Lace",
+        "name": "Purple Fabric",
         "visual_attributes": {
             "color": "Pink",
             "pattern": "Plain",
@@ -767,11 +767,11 @@
     "TESTIMG0022": {
         "sku": "TESTIMG0022",
         "image": "/catalogue/TESTIMG0022/source-031.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Cream",
         "description": "The image shows a close-up of a beige-colored fabric with a textured pattern. The fabric appears to be made of a soft, textured material with a subtle sheen. The pattern is made up of small, diamond-shaped stitches that create a zigzag-like design. The stitches are evenly spaced and run horizontally across the fabric. On the right side of the image, there is a white label with black text that reads \"Rishi Vastra Vyapar Pvt. Ltd.\" The label also has a barcode and the company's logo.",
         "applications": [],
-        "name": "Beige Chevron Lace",
+        "name": "Cream Scallop Mesh Lace",
         "visual_attributes": {
             "color": "Beige",
             "pattern": "Chevron",
@@ -784,11 +784,11 @@
     "TESTIMG0023": {
         "sku": "TESTIMG0023",
         "image": "/catalogue/TESTIMG0023/source-030.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Pink",
         "description": "The image is a close-up of a piece of white fabric with a delicate lace design. The fabric appears to be made of a soft, textured material, possibly cotton or linen. The design is made up of multiple layers of white lace, with a repeating pattern of small, intricate flowers and leaves. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are also intricately detailed, with curved lines and curves that create a sense of depth and dimension. The overall effect is elegant and delicate.",
         "applications": [],
-        "name": "Pink Striped Lace",
+        "name": "Pink Scallop Floral Lace",
         "visual_attributes": {
             "color": "Pink",
             "pattern": "Striped",
@@ -801,11 +801,11 @@
     "TESTIMG0024": {
         "sku": "TESTIMG0024",
         "image": "/catalogue/TESTIMG0024/source-033.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Mesh",
+        "color": "Cream",
         "description": "The image shows a close-up of a piece of fabric with a textured surface. The fabric appears to be made of a light-colored material with small, irregularly shaped holes scattered across it. The holes are evenly spaced and vary in size and shape, creating a uniform pattern. On the right side of the image, there is a white label with black text that reads \"Rishi Vastra Vapar PVT. LTD.\" The label also has a small logo of a company or supplier. The background is blurred, so the focus is on the fabric.",
         "applications": [],
-        "name": "Beige Mesh Lace",
+        "name": "Cream Mesh Mesh Lace",
         "visual_attributes": {
             "color": "Beige",
             "pattern": "Plain",
@@ -818,11 +818,11 @@
     "TESTIMG0025": {
         "sku": "TESTIMG0025",
         "image": "/catalogue/TESTIMG0025/source-032.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Pink",
         "description": "The image shows a close-up of a piece of pink fabric with a textured pattern. The fabric appears to be made of a soft, silky material and has a subtle sheen. The pattern is made up of vertical lines that create a zigzag-like design. On the right side of the image, there is a small white label with black text that reads \"Made in China\". The label is rectangular in shape and has the brand name and product details printed on it. The background is blurred, so the focus is on the fabric.",
         "applications": [],
-        "name": "Pink Lace",
+        "name": "Pink Rose Fabric",
         "visual_attributes": {
             "color": "Pink",
             "pattern": "Plain",
@@ -835,11 +835,11 @@
     "TESTIMG0026": {
         "sku": "TESTIMG0026",
         "image": "/catalogue/TESTIMG0026/source-034.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Leaf",
+        "color": "Brown",
         "description": "The image is a close-up of a fabric with a pattern of tropical leaves. The leaves are in various shades of brown and black, creating a striking contrast against the white background. The pattern is intricate and detailed, with each leaf having a unique shape and size. The fabric appears to be made of cotton or a similar material, and there is a label on the right side of the image that reads \"Made in the USA\".",
         "applications": [],
-        "name": "Brown Leaf Motif Lace",
+        "name": "Brown Leaf Fabric",
         "visual_attributes": {
             "color": "Brown",
             "pattern": "Leaf Motif",
@@ -852,11 +852,11 @@
     "TESTIMG0027": {
         "sku": "TESTIMG0027",
         "image": "/catalogue/TESTIMG0027/source-035.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Leaf",
+        "color": "Green",
         "description": "The image shows a close-up of a piece of fabric with a green background. The fabric appears to be made of cotton or a similar material and has a subtle pattern of small white dots scattered across it. The dots are arranged in a circular pattern, creating a sense of depth and dimension. On the right side of the image, there are two white labels with black text, one on top of the other. The labels appear to be for a product or service.",
         "applications": [],
-        "name": "Green Leaf Motif Lace",
+        "name": "Green Leaf Fabric",
         "visual_attributes": {
             "color": "Green",
             "pattern": "Leaf Motif",
@@ -869,11 +869,11 @@
     "TESTIMG0028": {
         "sku": "TESTIMG0028",
         "image": "/catalogue/TESTIMG0028/source-036.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Floral",
+        "color": "Purple",
         "description": "The image is a close-up of a fabric with a floral pattern. The fabric appears to be made of a light-colored fabric with white background. In the center of the fabric, there is a large purple flower with a yellow center. The flower has multiple layers of petals that are arranged in a radial pattern, creating a sense of depth and dimension. The petals are slightly curved and have a soft, velvety texture. On the right side of the image, there are smaller purple flowers with white polka dots scattered throughout. A white label with black text is visible in the bottom right corner.",
         "applications": [],
-        "name": "Purple Floral Lace",
+        "name": "Purple Floral Fabric",
         "visual_attributes": {
             "color": "Purple",
             "pattern": "Floral",
@@ -886,11 +886,11 @@
     "TESTIMG0029": {
         "sku": "TESTIMG0029",
         "image": "/catalogue/TESTIMG0029/source-037.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Floral",
+        "color": "Multicolor",
         "description": "The image is a close-up of a piece of fabric with a colorful abstract painting on it. The painting is made up of different shades of pink, orange, yellow, and green, creating a vibrant and dynamic composition. The colors blend together to create a sense of depth and dimension, with the pink being the dominant color and the orange being the smallest. The yellow and pink colors are scattered throughout the painting, with some areas appearing darker and others lighter. The green leaves are also visible, adding a pop of color to the painting. On the right side of the image, there is a white label with black text that reads \"SALE\" and a barcode.",
         "applications": [],
-        "name": "Red Floral Lace",
+        "name": "Multicolor Floral Fabric",
         "visual_attributes": {
             "color": "Red",
             "pattern": "Floral",
@@ -903,11 +903,11 @@
     "TESTIMG0030": {
         "sku": "TESTIMG0030",
         "image": "/catalogue/TESTIMG0030/source-039.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Zigzag",
+        "color": "Brown",
         "description": "The image shows a close-up of a fabric with a zigzag pattern. The fabric appears to be made of a soft, textured material, possibly wool or a similar material. The pattern is made up of alternating black and beige zigzags, creating a chevron-like design. On the right side of the image, there is a white label with black text that reads \"Made in the USA\". The label is rectangular in shape and has a black border. The background is white, making the fabric stand out.",
         "applications": [],
-        "name": "Brown Mesh Zigzag Lace",
+        "name": "Brown Zigzag Fabric",
         "visual_attributes": {
             "color": "Brown",
             "pattern": "Zigzag",
@@ -920,11 +920,11 @@
     "TESTIMG0031": {
         "sku": "TESTIMG0031",
         "image": "/catalogue/TESTIMG0031/source-040.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Scallop",
+        "color": "Ivory",
         "description": "The image shows a close-up of a piece of fabric with a repeating pattern of small, circular designs. The fabric appears to be a light beige color with a subtle texture. The designs are arranged in a symmetrical pattern, with each design having a different size and shape. On the right side of the image, there is a white label with black text and a barcode. The label is rectangular in shape and has a black border. The background is plain white.",
         "applications": [],
-        "name": "Brown Embroidered Polka Dot Lace",
+        "name": "Ivory Scallop Fabric",
         "visual_attributes": {
             "color": "Brown",
             "pattern": "Polka Dot",
@@ -937,11 +937,11 @@
     "TESTIMG0032": {
         "sku": "TESTIMG0032",
         "image": "/catalogue/TESTIMG0032/source-045.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Geometric",
+        "color": "Green",
         "description": "The image shows a piece of white fabric with a green abstract pattern on it. The pattern is made up of multiple lines that form a zigzag-like design. The lines are arranged in a way that creates a sense of depth and dimension. The fabric appears to be made of a soft, lightweight material and has a slightly wrinkled texture. On the top right corner of the image, there is a label with a barcode and some information about the fabric. The background is plain white.",
         "applications": [],
-        "name": "Green Mesh Lattice Lace",
+        "name": "Green Geometric Fabric",
         "visual_attributes": {
             "color": "Green",
             "pattern": "Lattice",
@@ -954,11 +954,11 @@
     "TESTIMG0033": {
         "sku": "TESTIMG0033",
         "image": "/catalogue/TESTIMG0033/source-046.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Plain",
+        "color": "Purple",
         "description": "The image shows a close-up of a piece of fabric with a textured surface. The fabric appears to be a light purple color with a subtle sheen. The texture of the fabric is rough and uneven, with vertical lines running horizontally across the image. On the right side of the image, there is a white label with black text that reads \"Made in China\". The label is rectangular in shape and has a black border. The background is white, making the fabric stand out.",
         "applications": [],
-        "name": "Lavender Lace",
+        "name": "Purple Fabric",
         "visual_attributes": {
             "color": "Lavender",
             "pattern": "Plain",
@@ -971,11 +971,11 @@
     "TESTIMG0034": {
         "sku": "TESTIMG0034",
         "image": "/catalogue/TESTIMG0034/source-047.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Plain",
+        "color": "Navy",
         "description": "The image shows a close-up of a dark blue fabric. The fabric appears to be made of a soft, silky material and has a smooth texture. On the right side of the image, there is a white label with black text. The label is rectangular in shape and has the brand name \"J.Crew\" written in bold letters at the top. The background is blurred, but it seems to be a wooden surface.",
         "applications": [],
-        "name": "Navy Guipure Lace",
+        "name": "Navy Fabric",
         "visual_attributes": {
             "color": "Navy",
             "pattern": "Plain",
@@ -988,11 +988,11 @@
     "TESTIMG0035": {
         "sku": "TESTIMG0035",
         "image": "/catalogue/TESTIMG0035/source-048.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Floral",
+        "color": "Yellow",
         "description": "The image is a close-up of a fabric with a floral pattern. The fabric has a white background with a repeating design of blue and yellow flowers and green leaves. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are scattered throughout the design, creating a sense of depth and dimension. On the right side of the image, there is a small white label with black text that appears to be a label for the fabric.",
         "applications": [],
-        "name": "Yellow Guipure Floral Lace",
+        "name": "Yellow Floral Fabric",
         "visual_attributes": {
             "color": "Yellow",
             "pattern": "Floral",
@@ -1005,11 +1005,11 @@
     "TESTIMG0036": {
         "sku": "TESTIMG0036",
         "image": "/catalogue/TESTIMG0036/source-051.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Floral",
+        "color": "Green",
         "description": "The image shows a close-up of a piece of fabric with two black lines drawn on it. The lines are arranged in a symmetrical pattern, creating a sense of depth and dimension. The fabric appears to be a light green color, and there is a small white label on the bottom right corner of the image that reads \"BEST VALUE, Top Picks Updated + BONUS\".",
         "applications": [],
-        "name": "Green Guipure Floral Lace",
+        "name": "Green Floral Fabric",
         "visual_attributes": {
             "color": "Green",
             "pattern": "Floral",
@@ -1022,11 +1022,11 @@
     "TESTIMG0037": {
         "sku": "TESTIMG0037",
         "image": "/catalogue/TESTIMG0037/source-052.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Brown",
         "description": "The image shows a close-up of a piece of fabric with a floral pattern. The fabric appears to be made of a dark brown material with a subtle texture. The pattern is made up of small, intricate flowers and leaves in a repeating design. The flowers are in various shades of brown and are arranged in a symmetrical pattern, with some overlapping each other. On the right side of the image, there is a white label with black text that reads \"Made in the USA\". The label is rectangular in shape and has a barcode printed on it.",
         "applications": [],
-        "name": "Brown Guipure Rose Motif Lace",
+        "name": "Brown Rose Floral Lace",
         "visual_attributes": {
             "color": "Brown",
             "pattern": "Rose Motif",
@@ -1039,11 +1039,11 @@
     "TESTIMG0038": {
         "sku": "TESTIMG0038",
         "image": "/catalogue/TESTIMG0038/source-053.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Floral",
+        "color": "Green",
         "description": "The image is a close-up of a piece of paper with a black line drawing of a flower on it. The flower is drawn in a simple, hand-drawn style with thin lines and curves. The petals of the flower are outlined in black and the center of the petals are filled with small dots. The background of the paper is a light green color, and there is a small piece of white paper on the bottom right corner of the image. The paper appears to be slightly crumpled, suggesting that it has been used before.",
         "applications": [],
-        "name": "Green Embroidered Floral Lace",
+        "name": "Green Floral Fabric",
         "visual_attributes": {
             "color": "Green",
             "pattern": "Floral",
@@ -1056,11 +1056,11 @@
     "TESTIMG0039": {
         "sku": "TESTIMG0039",
         "image": "/catalogue/TESTIMG0039/source-054.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Pink",
         "description": "The image shows a close-up of a piece of pink fabric. The fabric appears to be made of a soft, silky material and has a slightly wrinkled texture. On the right side of the image, there is a small white label with black text that reads \"Made in the USA\". The label is rectangular in shape and is placed on a white surface. The background is blurred, so the focus is on the fabric.",
         "applications": [],
-        "name": "Blush Guipure Lace",
+        "name": "Pink Rose Fabric",
         "visual_attributes": {
             "color": "Blush",
             "pattern": "Plain",
@@ -1073,11 +1073,11 @@
     "TESTIMG0040": {
         "sku": "TESTIMG0040",
         "image": "/catalogue/TESTIMG0040/source-055.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Pink",
         "description": "The image shows a close-up of a pink fabric with a floral design. The fabric appears to be made of a shiny, metallic material and has a delicate, intricate pattern of large, pink flowers and leaves. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The leaves are also intricately detailed and have a metallic sheen, giving the fabric a luxurious and elegant look. The background is a solid pink color, making the flowers stand out even more. In the bottom right corner of the image, there is a white label with the brand name \"Rihanna\" written in black text.",
         "applications": [],
-        "name": "Pink Embroidered Rose Motif Lace",
+        "name": "Pink Rose Embroidered Lace",
         "visual_attributes": {
             "color": "Pink",
             "pattern": "Rose Motif",
@@ -1090,11 +1090,11 @@
     "TESTIMG0041": {
         "sku": "TESTIMG0041",
         "image": "/catalogue/TESTIMG0041/source-056.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Floral",
+        "color": "Navy",
         "description": "The image shows a close-up of a piece of fabric with a blue floral pattern. The fabric appears to be made of a soft, textured material and has a subtle sheen. The pattern is made up of multiple large, intricate flowers and leaves in a repeating design. The flowers are arranged in a symmetrical pattern, with some overlapping each other. On the right side of the image, there is a small white label with black text that reads \"Made in Japan\". The label is placed on top of the fabric, and there are a few pieces of paper visible in the bottom right corner.",
         "applications": [],
-        "name": "Navy Guipure Floral Lace",
+        "name": "Navy Floral Fabric",
         "visual_attributes": {
             "color": "Navy",
             "pattern": "Floral",
@@ -1107,11 +1107,11 @@
     "TESTIMG0042": {
         "sku": "TESTIMG0042",
         "image": "/catalogue/TESTIMG0042/source-057.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Rose",
+        "color": "Grey",
         "description": "The image is a close-up of a fabric with a repeating pattern of black roses. The roses are arranged in a symmetrical pattern, with each rose having a unique shape and size. The fabric appears to be made of a sheer, textured material, with a subtle sheen. The background is white, making the roses stand out even more. In the bottom right corner of the image, there is a white label with the brand name and product details printed on it.",
         "applications": [],
-        "name": "Grey Guipure Rose Motif Lace",
+        "name": "Grey Rose Guipure Lace",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Rose Motif",
@@ -1124,11 +1124,11 @@
     "TESTIMG0043": {
         "sku": "TESTIMG0043",
         "image": "/catalogue/TESTIMG0043/source-058.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Sequin",
+        "color": "Gold",
         "description": "The image is a close-up of a fabric with a textured surface. The fabric appears to be made up of small, round, gold-colored sequins that are scattered randomly across the fabric. The sequins are of different sizes and colors, including red, gold, and silver. On the right side of the image, there is a white label with black text that reads \"Made in the USA\". The label is rectangular in shape and has a black border.",
         "applications": [],
-        "name": "Gold Beaded Lace",
+        "name": "Gold Sequin Fabric",
         "visual_attributes": {
             "color": "Gold",
             "pattern": "Plain",
@@ -1141,11 +1141,11 @@
     "TESTIMG0044": {
         "sku": "TESTIMG0044",
         "image": "/catalogue/TESTIMG0044/source-059.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Embroidered",
+        "color": "Brown",
         "description": "The image shows a close-up of a piece of fabric with a floral design on it. The fabric appears to be a light beige color and has a textured surface. The design is made up of multiple large, dark brown flowers with intricate details. The flowers are arranged in a symmetrical pattern, with each flower having a unique shape and size. The petals of the flowers are slightly curved and the center of each flower is a darker shade of brown. There are also several smaller, lighter brown flowers scattered throughout the design, with some overlapping each other. On the right side of the image, there is a white label with black text that reads \"Made in India\".",
         "applications": [],
-        "name": "Brown Embroidered Rose Motif Lace",
+        "name": "Brown Embroidered Embroidered Lace",
         "visual_attributes": {
             "color": "Brown",
             "pattern": "Rose Motif",
@@ -1158,11 +1158,11 @@
     "TESTIMG0045": {
         "sku": "TESTIMG0045",
         "image": "/catalogue/TESTIMG0045/source-060.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Sequin",
+        "color": "Red",
         "description": "The image is a close-up of a piece of fabric with a red and beige floral pattern. The fabric appears to be made of a soft, textured material with a repeating design of white and red flowers and leaves. The flowers are arranged in a symmetrical pattern, with some overlapping each other. The center of the fabric has a large red flower with a yellow center, surrounded by smaller white flowers. On the right side of the image, there is a white label with black text and a barcode. The label is rectangular in shape and has a black border.",
         "applications": [],
-        "name": "Red Beaded Floral Lace",
+        "name": "Red Sequin Fabric",
         "visual_attributes": {
             "color": "Red",
             "pattern": "Floral",
@@ -1175,11 +1175,11 @@
     "TESTIMG0046": {
         "sku": "TESTIMG0046",
         "image": "/catalogue/TESTIMG0046/source-061.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Sequin",
+        "color": "Silver",
         "description": "The image shows a close-up of a piece of fabric with a label on it. The label has a white background with black text and a black and white illustration of a person's face. The text on the label is written in a cursive font and appears to be a list of items. The fabric has a textured surface with small white dots scattered across it, giving it a speckled appearance. The overall color scheme of the fabric is gray and white.",
         "applications": [],
-        "name": "Silver Beaded Lace",
+        "name": "Silver Sequin Fabric",
         "visual_attributes": {
             "color": "Silver",
             "pattern": "Plain",
@@ -1192,11 +1192,11 @@
     "TESTIMG0047": {
         "sku": "TESTIMG0047",
         "image": "/catalogue/TESTIMG0047/source-062.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Sequin",
+        "color": "Red",
         "description": "The image is a close-up of a fabric covered in small, shiny red sequins. The sequins are arranged in a random pattern, creating a textured surface. On the right side of the image, there is a white label with black text and a barcode. The label appears to be a label for a product or label. The fabric has a shiny, metallic finish and the sequins appear to be shiny and shiny.",
         "applications": [],
-        "name": "Red Beaded Lace",
+        "name": "Red Sequin Fabric",
         "visual_attributes": {
             "color": "Red",
             "pattern": "Plain",
@@ -1209,11 +1209,11 @@
     "TESTIMG0048": {
         "sku": "TESTIMG0048",
         "image": "/catalogue/TESTIMG0048/source-063.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Mesh",
+        "color": "Grey",
         "description": "The image shows a close-up of a piece of fabric with a label on it. The fabric appears to be made of a woven material with a textured surface. The label is rectangular in shape and has a white background with black text. On the left side of the label, there is a black and white image of a person's face with their eyes closed and their mouth slightly open, as if they are in a state of deep thought or contemplation. The image is taken from a slightly elevated angle, looking down on the fabric.",
         "applications": [],
-        "name": "Grey Mesh Striped Lace",
+        "name": "Grey Mesh Fabric",
         "visual_attributes": {
             "color": "Grey",
             "pattern": "Striped",
@@ -1226,11 +1226,11 @@
     "TESTIMG0049": {
         "sku": "TESTIMG0049",
         "image": "/catalogue/TESTIMG0049/source-064.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Sequin",
+        "color": "Green",
         "description": "The image is a close-up of a textured surface covered in small, circular sequins in shades of green, blue, and purple. The sequins are arranged in a random pattern, creating a mosaic-like effect. On the right side of the image, there is a white label with black text and a barcode. The label appears to be a label for a product or service. The background is black, making the sequins stand out even more.",
         "applications": [],
-        "name": "Green Beaded Diamond Lace",
+        "name": "Green Sequin Fabric",
         "visual_attributes": {
             "color": "Green",
             "pattern": "Diamond",
@@ -1243,11 +1243,11 @@
     "TESTIMG0050": {
         "sku": "TESTIMG0050",
         "image": "/catalogue/TESTIMG0050/source-065.jpeg",
-        "pattern": "",
-        "color": "",
+        "pattern": "Leaf",
+        "color": "Black",
         "description": "The image shows a close-up of a piece of fabric with a black and white zigzag pattern. The fabric appears to be made of a woven material, possibly cotton or a similar material, and has a textured surface. The pattern is made up of small, irregularly shaped lines that create a zig-zag-like design. The lines are evenly spaced and run horizontally across the fabric. On the right side of the image, there is a white label with the brand name \"Rishi Vastra Vapar Pvt. Ltd.\" written in black text. The label also has a small logo of the company on the bottom right corner.",
         "applications": [],
-        "name": "Black Zigzag Lace",
+        "name": "Black Leaf Fabric",
         "visual_attributes": {
             "color": "Black",
             "pattern": "Zigzag",
